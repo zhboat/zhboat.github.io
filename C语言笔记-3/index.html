@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/releases/tag/3.0.0-rc.2'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>C语言笔记(3) - 柚子的随记</title>
+  
+    <meta name="keywords" content="C">
+  
+
+  
+    <meta name="description" content="程序代码记录(习题)">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic/pictures/favicon.png">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+  
+</head>
+
+<body>
+  
+  
+  
+  <div class="cover-wrapper">
+    <cover class='cover post' style="display: none;">
+      <div class='cover-body'>
+  <div class='a'>
+    
+    
+      <p class="title">柚子的随记</p>
+    
+    
+  </div>
+  <div class='b'>
+    <div class='menu navigation focus'>
+      <div class='list-h'>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+    </cover>
+    <header class="l_header shadow blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  </div>
+  
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper' id="pjax-container">
+      
+        <!--此文件用来存放一些不方便取值的变量--> 
+<!--思路大概是将值藏到重加载的区域内--> 
+ 
+ 
+ 
+<div id="pjax-data" style="display: none"> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">C语言笔记(3)</div> 
+  <div id="pjax-enable-cover">true</div> 
+  <div id="pjax-comment-path">none</div> 
+  <div id="pjax-comment-placeholder">none</div> 
+</div> 
+ 
+ 
+<script> 
+  // 处理封面 此时 jquery 还没加载 
+  if ("none" == "none") { // 移除封面 
+    document.getElementsByClassName('cover')[0].style.display = "none"; 
+    document.getElementsByClassName('l_body')[0].classList.add("nocover"); 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
+  } else { 
+    if ("none" == "blog") { // 半屏 
+      document.getElementsByClassName('cover')[0].classList.remove("full"); 
+      document.getElementsByClassName('cover')[0].classList.add("half"); 
+      document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
+    } else if ("none" == "docs") { // 全屏 
+      document.getElementsByClassName('cover')[0].classList.remove("half"); 
+      document.getElementsByClassName('cover')[0].classList.add("full"); 
+      document.getElementsByClassName('scroll-down')[0].style.display = ""; 
+    } 
+    document.getElementsByClassName('cover')[0].style.display = ""; 
+    document.getElementsByClassName('l_body', 'show')[0].classList.remove("nocover"); 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show"); 
+  } 
+</script> 
+
+      
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  <h1 class="title">
+    <a href="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3/">
+      C语言笔记(3)
+    </a>
+  </h1>
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a class='author' href="" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic/pictures/favicon.png">
+    <p>柚木舟</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年4月13日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <p>程序代码记录(习题)</p>
+<a id="more"></a>
+
+<h2 id="猜数游戏"><a href="#猜数游戏" class="headerlink" title="猜数游戏"></a>猜数游戏</h2><ul>
+<li><p>让计算机来存储一个数,然后让用户来猜,每当用户输入一个数,计算机就输出该数大于或小于用户输入的数,直到用户猜中为止,最后还要输出用户一共猜了多少次</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h3><ol>
+<li><p>随机数</p>
+<p>添加一个整型变量,它的值为随机数</p>
+<p> x % n 的结果是[0,n-1]的整数</p>
+</li>
+<li><p>用户输入数</p>
+<p>用户输入的值需要写在循环体内</p>
+</li>
+<li><p>计数器</p>
+<p>计数器需要写在判断前,无论是否做出判断,只要用户做出了”猜”的动作,就让计数器++</p>
+</li>
+<li><p>判断</p>
+<p>循环体中需要写一段判断条件:</p>
+<p>用户输入的数大于指定数值时,输出”大于该数”</p>
+<p>而当用户输入的数小于指定数值时,输出”小于该数”</p>
+</li>
+<li><p>结束条件</p>
+<p>只有当条件成立时,才会结束循环</p>
+<p><strong><em>不要按照人的思维来理解循环条件</em></strong> (?)</p>
+<p>并输出变量值</p>
+</li>
+</ol>
+<h4 id="思路实现"><a href="#思路实现" class="headerlink" title="思路实现:"></a>思路实现:</h4><p>如果需要用到随机数需要引用两个库<code>stdlib.h</code>和<code>time.h</code></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">srand(time(<span class="number">0</span>));</span><br><span class="line"><span class="keyword">int</span> <span class="built_in">random</span> = rand() %<span class="number">100</span> +<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p>只需要取100以内的数,随机数 % 100 为 0-99,+1的操作让其为100以内</p>
+<p>用户的猜数操作需要写在循环体中</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> input;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;input);</span><br></pre></td></tr></table></figure>
+
+<p>定义一个计数器,让它用户输入数值后++,以满足每次”猜数”的操作能记录</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> time = <span class="number">0</span>;</span><br><span class="line">time++;</span><br></pre></td></tr></table></figure>
+
+<p> 用户输入的数大于指定数值时,输出”大于该数”</p>
+<p> 而当用户输入的数小于指定数值时,输出”小于该数”</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> ( input &gt; <span class="built_in">random</span> )&#123;</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"您输入的数大于随机数"</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> ( input &lt; <span class="built_in">random</span> )&#123;</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"您输入的数小于随机数"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结束的条件是当用户输入数等于随机数才跳出循环,在代码中的实现却得写成这样</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> ( input != <span class="built_in">random</span> );</span><br></pre></td></tr></table></figure>
+
+<p>当输入值不等于随机数时继续循环,只有输入值等于随机数才会结束循环</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码:"></a>代码:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 定义一个随机数</span></span><br><span class="line"><span class="comment"> * 定义一个计数器</span></span><br><span class="line"><span class="comment"> * 定义一个用户输入值</span></span><br><span class="line"><span class="comment"> * 无论是否做出判断都会执行一次输入值的动作，所以使用do while</span></span><br><span class="line"><span class="comment"> * 将用户输入值的操作写在循环体中，而后让计数器++</span></span><br><span class="line"><span class="comment"> * 判断输入值是否大于或等于随机数</span></span><br><span class="line"><span class="comment"> * 不满足条件时结束循环*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdlib.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    srand(time(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">random</span>  = rand() %<span class="number">100</span> + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> input;</span><br><span class="line">    <span class="keyword">int</span> time = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;input);</span><br><span class="line">        time++;</span><br><span class="line">        <span class="keyword">if</span> ( input &gt; <span class="built_in">random</span> )&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"您输入的数大于随机数"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> ( input &lt; <span class="built_in">random</span> )&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"您输入的数小于随机数"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">while</span> ( input != <span class="built_in">random</span> );</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"您猜中了！您一共猜了%d次"</span>, time);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h2 id="算平均数"><a href="#算平均数" class="headerlink" title="算平均数"></a>算平均数</h2><ul>
+<li><p>让用户输入一系列正整数,当用户输入-1时结束输入,然后程序计算出这些数字的平均数,输出用户输入数字的个数与平均数</p>
+<h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路:"></a>思路:</h3><ol>
+<li><p>用户输入数</p>
+<p>除了需要用户输入外,还需要定义一个存储这些数的变量</p>
+</li>
+<li><p>计数器</p>
+<p>每当用户输入数字之后就进行++的操作</p>
+<p>但当用户输入结束指令时也会被记录,所以要在循环体外让计数器-1</p>
+</li>
+<li><p>结束</p>
+<p>不满足条件时结束循环</p>
+</li>
+</ol>
+<h4 id="思路实现-1"><a href="#思路实现-1" class="headerlink" title="思路实现:"></a>思路实现:</h4><ol>
+<li><p>循环条件</p>
+<p>满足循环的条件是当用户输入的值不为-1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">while ( input !&#x3D; -1)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用户输入数</p>
+<p>用户输入的值需要写在循环体内</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> input;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;input);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>计数器</p>
+<p>计数器需要写在用户输入后面,每当用户输入后都进行++的操作</p>
+<p>但是在结束循环体后要让计数器-1</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> time = <span class="number">0</span>;</span><br><span class="line">time ++;</span><br><span class="line">time -= <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>存储数值</p>
+<p>计算平均数需要让用户输入的所有数相加并除以输入次数,所以存储变量需要每次都在原有基础上加上用户新输入的数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">sum += input;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码:"></a>代码:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 定义input time sum 变量</span></span><br><span class="line"><span class="comment"> * 分别对应用户输入值，计数器，和用户输入值总和</span></span><br><span class="line"><span class="comment"> * 当用户输入的值不为-1时进入循环</span></span><br><span class="line"><span class="comment"> * sum的值为input+sum</span></span><br><span class="line"><span class="comment"> * 每次用户输完数后计数器都会++，即使是-1</span></span><br><span class="line"><span class="comment"> * 所以要在结束循环后让计数器-1，让其变成正常的</span></span><br><span class="line"><span class="comment"> * 最后输出计数器和平均值*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> input , time , sum;</span><br><span class="line">    time = <span class="number">0</span>;</span><br><span class="line">    input = <span class="number">0</span>;</span><br><span class="line">    sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> ( input != <span class="number">-1</span>)&#123;</span><br><span class="line">        sum += input;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;input);</span><br><span class="line">        time++;</span><br><span class="line">    &#125;</span><br><span class="line">    time -= <span class="number">1</span>;</span><br><span class="line"><span class="comment">//    另一种实现方式</span></span><br><span class="line"><span class="comment">//    scanf("%d", &amp;input);</span></span><br><span class="line"><span class="comment">//    while ( input != -1)&#123;</span></span><br><span class="line"><span class="comment">//        time++;</span></span><br><span class="line"><span class="comment">//        sum += input;</span></span><br><span class="line"><span class="comment">//        scanf("%d", &amp;input);</span></span><br><span class="line"><span class="comment">//  &#125;</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"您一共输入了%d次，最后的平均数是：%d"</span>, time , sum / time);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="整数逆序"><a href="#整数逆序" class="headerlink" title="整数逆序"></a>整数逆序</h2><ul>
+<li><p>当用户输入任意数字后,计算机需要输出其对应的倒序</p>
+<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路:"></a>思路:</h3><ol>
+<li><p>对整数做%10的操作就能得到个位数</p>
+</li>
+<li><p>对整数做/10的操作就能去掉个位数</p>
+</li>
+</ol>
+<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码:"></a>代码:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 定义变量x和digit</span></span><br><span class="line"><span class="comment"> * 当用户输入x的值后进入while</span></span><br><span class="line"><span class="comment"> * 首先会判断x是否大于0，满足则进入循环体</span></span><br><span class="line"><span class="comment"> * digit的值是用户输入的最后一位</span></span><br><span class="line"><span class="comment"> * 然后将去掉的那一位数去掉，重新循环</span></span><br><span class="line"><span class="comment"> * 知道x的值不满足大于0的条件才会结束循环*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x , digit;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;x);</span><br><span class="line">    <span class="keyword">while</span> ( x &gt;  <span class="number">0</span>)&#123;</span><br><span class="line">        digit = x % <span class="number">10</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>, digit);</span><br><span class="line">        x /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="整数分解"><a href="#整数分解" class="headerlink" title="整数分解"></a>整数分解</h2><ul>
+<li><p>输入一个非负整数,正序输出它每一位数字,并在其后面加空格</p>
+<p>输入:12345</p>
+<p>输出:1  2  3  4  5</p>
+<h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路:"></a>思路:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(input)12345 &#x2F; (mask)10000 &#x3D; (result)1</span><br><span class="line">(input)12345 % (mask)10000 &#x3D; 2345</span><br><span class="line">(mask)10000 &#x2F; 10    &#x3D; (mask)1000</span><br><span class="line"></span><br><span class="line">(input)2345 &#x2F; (mask)1000 &#x3D; (result)2</span><br><span class="line">(input)2345 % (mask)1000 &#x3D; 345</span><br><span class="line">(mask)1000 &#x2F; 10    &#x3D; (mask)100</span><br><span class="line"></span><br><span class="line">...如此循环,直至mask&#x3D;0</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>取位数(mask)</p>
+<p>之前写过取位数的相关代码,但是仅仅只是取位数而已,这里我们需要每取一位就让input除等以10,mask乘等以10,直到input被除到小于等于10为止</p>
+</li>
+<li><p>算法实现</p>
+<p>得知mask的值之后就好办了,根据上述算法就可以写出代码了</p>
+<p>判断,当mask大于1就输出一个空格</p>
+</li>
+</ol>
+<h3 id="代码-3"><a href="#代码-3" class="headerlink" title="代码:"></a>代码:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> inp;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;inp);</span><br><span class="line">    <span class="keyword">int</span> inp2 = inp;</span><br><span class="line">    <span class="keyword">int</span> mask = <span class="number">1</span>;</span><br><span class="line"><span class="comment">//    取位数</span></span><br><span class="line">    <span class="keyword">while</span> ( inp &gt; <span class="number">9</span> )&#123;</span><br><span class="line">        inp /= <span class="number">10</span>;</span><br><span class="line">        mask *= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"mask=%d\n"</span>, mask);</span><br><span class="line"><span class="comment">//    算法</span></span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="keyword">int</span> res = inp2 / mask;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>, res);</span><br><span class="line">        <span class="keyword">if</span> ( mask &gt; <span class="number">1</span> )&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        inp2 %= mask;</span><br><span class="line">        mask /= <span class="number">10</span>;</span><br><span class="line">    &#125;<span class="keyword">while</span> ( mask &gt; <span class="number">0</span> );</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="最大公约数"><a href="#最大公约数" class="headerlink" title="最大公约数"></a>最大公约数</h2><ul>
+<li><p>输入两个数a和b,输出它们的最大公约数</p>
+<p>例如:输出12 和18</p>
+<p>输出6</p>
+<h3 id="思路-4"><a href="#思路-4" class="headerlink" title="思路:"></a>思路:</h3><ol>
+<li><p>如果b等于0,结束计算,a就是最大公约数;</p>
+</li>
+<li><p>计算a除b的余数,让a等于b,而b等于那个余数</p>
+</li>
+</ol>
+<h3 id="代码-4"><a href="#代码-4" class="headerlink" title="代码:"></a>代码:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a, b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;a, &amp;b);</span><br><span class="line">    <span class="keyword">while</span> (b != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> t = a % b;</span><br><span class="line">        a = b;</span><br><span class="line">        b = t;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d%d%d\n"</span>,a,b,t);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"gcd=%d"</span>, a);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="给定条件整数集"><a href="#给定条件整数集" class="headerlink" title="给定条件整数集"></a>给定条件整数集</h2><ul>
+<li><p>给定一个不超过6的正整数A,从A开始的连续4个数字算进整数集中,请输出由整数集中的所有无重复数字组成的3位数</p>
+</li>
+<li><p>要求输出的3位数从大到小排列,每行只存在6个整数,每个整数之间用空格分开,但是航模不允许有多余的空格</p>
+<h3 id="思路-5"><a href="#思路-5" class="headerlink" title="思路:"></a>思路:</h3><ol>
+<li><p>嵌套的三个循环,每个数对应一个变量</p>
+</li>
+<li><p>输出条件,当三个数字不相同的时候才输出结果</p>
+</li>
+<li><p>换行条件,满足循环6的次数,满足则换行,否则输出空格</p>
+</li>
+</ol>
+<h3 id="代码-5"><a href="#代码-5" class="headerlink" title="代码:"></a>代码:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 定义五个变量</span></span><br><span class="line"><span class="comment"> * a是用户输入值</span></span><br><span class="line"><span class="comment"> * i，j，k分别对应整数集中的三位数</span></span><br><span class="line"><span class="comment"> * time是计数器，每轮输出判断中让计数器++</span></span><br><span class="line"><span class="comment"> * 循环条件把用户输入的值赋给i，j，k，当它们小于等于3时才进入循环每轮循环让它们+1</span></span><br><span class="line"><span class="comment"> * 只有当i，j，k三个数互不相等时才满足输出判断</span></span><br><span class="line"><span class="comment"> * 如果计数器到达6次时，输出一个换行，并让计数器归零</span></span><br><span class="line"><span class="comment"> * 否则的话只输出空格符</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a, i, j, k, time = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a);</span><br><span class="line"><span class="comment">//  嵌套循环</span></span><br><span class="line">    <span class="keyword">for</span> (i = a; i &lt; a + <span class="number">4</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = a; j &lt; a + <span class="number">4</span>; j++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (k = a; k &lt; a + <span class="number">4</span>; k++) &#123;</span><br><span class="line"><span class="comment">//              输出判断</span></span><br><span class="line">                <span class="keyword">if</span> (i != k &amp;&amp; i != j &amp;&amp; j != k) &#123;</span><br><span class="line">                    time++;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"%d%d%d"</span>, i, j, k);</span><br><span class="line"><span class="comment">//                  换行判断</span></span><br><span class="line">                    <span class="keyword">if</span> (time == <span class="number">6</span>) &#123;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">                        time = <span class="number">0</span>;</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="水仙花数"><a href="#水仙花数" class="headerlink" title="水仙花数"></a>水仙花数</h2><ul>
+<li><p>水仙花数是指一个N位的正整数(N&gt;=3),它的每个位上的数字N次幂之和等于它本身的,计算出所有N位的水仙花数</p>
+<p>例如:153=1^3+5^3+3^3,输入3,输出153,370,371</p>
+<h3 id="思路-6"><a href="#思路-6" class="headerlink" title="思路:"></a>思路:</h3><ol>
+<li><p>先利用循环得出N位数的最小数,例如n为3,则最小数为100</p>
+</li>
+<li><p>其次一个大循环,范围是最小数到最大数(最小数*10)</p>
+</li>
+<li><p>将所有数都拆分开计算,每个数都乘n次自身,使用sum储存它们的和</p>
+</li>
+<li><p>判断,当sum与大循环的条件相等时,就为水仙花数</p>
+</li>
+</ol>
+<h3 id="代码-6"><a href="#代码-6" class="headerlink" title="代码:"></a>代码:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//水仙花数是指一个N位的正整数（ N&gt;=3 ），它的每个位上的数字的N次幂之和等于它本身,计算出所有N位水仙花数</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, first = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">if</span> (n &lt; <span class="number">3</span> || n &gt; <span class="number">7</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"您输入的数有误,请重新输入"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">            first *= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//k = first~first*10</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k = first; k &lt; first * <span class="number">10</span>; ++k) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> p = k; p &gt; <span class="number">0</span>;) &#123;</span><br><span class="line">                <span class="keyword">int</span> o = <span class="number">0</span>;</span><br><span class="line">                o = p % <span class="number">10</span>; <span class="comment">// o = 100 ~ 999 % 10</span></span><br><span class="line">                <span class="keyword">int</span> res = o;</span><br><span class="line">                p /= <span class="number">10</span>; <span class="comment">// first~first*10/10</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; n; j++) &#123; <span class="comment">//循环两次</span></span><br><span class="line">                    res *= o;<span class="comment">// res * res * res</span></span><br><span class="line">                &#125;</span><br><span class="line">                sum += res; <span class="comment">//sum = sum + res * res * res</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (k == sum) &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, sum);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="九九乘法表"><a href="#九九乘法表" class="headerlink" title="九九乘法表"></a>九九乘法表</h2><ul>
+<li><p>完整口诀表</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/05-11_19:00.png" alt="05-11_19:00"></p>
+</li>
+<li><p>对任意给定的1位正整数N,输出从1<em>1到n\</em>n的下三角部分口诀表,结果后面需要占四位空格,左对齐显示</p>
+<h3 id="思路-7"><a href="#思路-7" class="headerlink" title="思路:"></a>思路:</h3><ol>
+<li><p>两个循环,第一个范围从1到输入的正整数N,每循环一轮+1</p>
+</li>
+<li><p>第二个循环从1到上一个变量的数,实现递减</p>
+</li>
+<li><p>还需要有个判断,当结果是个位数时打印四个空格,否则输出三个空格</p>
+</li>
+</ol>
+<h3 id="代码-7"><a href="#代码-7" class="headerlink" title="代码:"></a>代码:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="comment">// 判断n的大小</span></span><br><span class="line">    <span class="keyword">if</span> (n &lt; <span class="number">1</span> || n &gt; <span class="number">9</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"范围是1~9，请重新输入"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 从1到n循环</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">            <span class="comment">// 从1到i循环</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j++) &#123;</span><br><span class="line">                <span class="keyword">int</span> sum;</span><br><span class="line">                sum = i * j;</span><br><span class="line">                <span class="comment">// 当和是个位数时打印四个空格</span></span><br><span class="line">                <span class="keyword">if</span> (sum &lt; <span class="number">10</span>) &#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"%d*%d=%d   "</span>, j, i, sum);</span><br><span class="line">                    <span class="comment">// 大于个位数时打印三个空格</span></span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum &gt;= <span class="number">10</span>) &#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"%d*%d=%d  "</span>, j, i, sum);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="统计素数求和"><a href="#统计素数求和" class="headerlink" title="统计素数求和"></a>统计素数求和</h2><ul>
+<li><p>统计给定整数M和N区间内素数的个数,并对它们求和</p>
+</li>
+<li><p>输入M和N,以空格分开,范围是1&lt;=M&lt;=N&lt;=500</p>
+<h3 id="思路-8"><a href="#思路-8" class="headerlink" title="思路:"></a>思路:</h3><p>之前做过100以内的50个素数,判断方法直接照搬就行</p>
+<p>添加一个求和的操作就行</p>
+<h3 id="代码-8"><a href="#代码-8" class="headerlink" title="代码:"></a>代码:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m, n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;m, &amp;n);</span><br><span class="line">    <span class="keyword">if</span> (m &lt; <span class="number">1</span> || n &gt; <span class="number">500</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"请重新输入"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (m == <span class="number">1</span>) &#123;</span><br><span class="line">            m = <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> time = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = m; i &lt;= n; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> isPrime = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">2</span>; k &lt; i; k++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i % k == <span class="number">0</span>) &#123;</span><br><span class="line">                    isPrime = <span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 判断是否为素数</span></span><br><span class="line">            <span class="keyword">if</span> (isPrime) &#123;</span><br><span class="line">                time++;</span><br><span class="line">                sum += i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d"</span>, time, sum);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="猜数游戏2"><a href="#猜数游戏2" class="headerlink" title="猜数游戏2"></a>猜数游戏2</h2><ul>
+<li><p>猜数游戏是让系统随机产生一个100以内的正整数,用户输入一个数对其猜测,编写程序让输入数字与产生的随机数进行对比较,如果大了提示”Too big!”,如果小了提示”Too small”,相等表示猜到了</p>
+</li>
+<li><p>如果猜到的话,程序结束,并统计猜数的次数</p>
+</li>
+<li><p>如果1次就猜中了就提示”Bingo!”,三次以内猜中该随机数则提示”Lucky You!”,如果超过三次但是在N(N &gt; 3)次以内(包括第N次)猜到该随机数则提示”Good Guess”,如果超过N次都没猜到或者在没到达N次之前用户输入了一个负数,提示”Game Over!”,并结束程序</p>
+</li>
+<li><p>输入格式:在第一行输入两个不超过100的正整数,分别是第一次用户的输入,以及猜测的最大次数N,随后每行给出一个用户的输入</p>
+</li>
+<li><p>输出格式:在一行中输出每次猜测相对应的结果,直到输出才对的结果或是”Game Over”则结束</p>
+<h3 id="思路-9"><a href="#思路-9" class="headerlink" title="思路:"></a>思路:</h3><p>if 造它就完了,奥利给!</p>
+<ol>
+<li>100以内正整数随机数</li>
+<li>循环次数,判断条件,计数器</li>
+</ol>
+<h3 id="代码-9"><a href="#代码-9" class="headerlink" title="代码:"></a>代码:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdlib.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 生成随机数</span></span><br><span class="line">    srand(time(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">random</span> = rand() % <span class="number">100</span> + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> i, j, time;</span><br><span class="line">    <span class="comment">// 第一次猜测以及最大猜测次数输入</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;i, &amp;time);</span><br><span class="line">    <span class="comment">// 循环100次</span></span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">100</span> ; j++) &#123;</span><br><span class="line">        <span class="comment">// 如果满足i是负数或者循环次数比最大猜测数大</span></span><br><span class="line">        <span class="keyword">if</span> (i &lt; <span class="number">0</span> || j &gt; time) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"Game Over!"</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; <span class="built_in">random</span>) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"Too small\n"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i &gt; <span class="built_in">random</span>) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"Too big\n"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123; <span class="comment">// 相等的各种情况</span></span><br><span class="line">            <span class="keyword">if</span> (j == <span class="number">0</span>) &#123; <span class="comment">// 一次猜中</span></span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"Bingo!\n"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (j &lt;= <span class="number">3</span>) &#123; <span class="comment">// 三次内</span></span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"Lucky You!"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (j &gt; <span class="number">3</span> &amp;&amp; j &lt; time) &#123; <span class="comment">// 超过三次,但是不超过最大猜测数</span></span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"Good Guess!"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 每轮循环重新输入猜测数</span></span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="前N项和"><a href="#前N项和" class="headerlink" title="前N项和"></a>前N项和</h2><ul>
+<li><p>计算序列<code>2/1+3/2+5/3+8/5+...</code>的前N项之和</p>
+</li>
+<li><p>序列从2开始,每一项的分子是前一项分子与分母的和,分母是前一项的分子</p>
+</li>
+<li><p>输入格式:输入一个正整数N</p>
+</li>
+<li><p>输出格式:输出部分和的值,精确到小数点后两位,计算结果不超过双精度范围</p>
+<h3 id="思路-10"><a href="#思路-10" class="headerlink" title="思路:"></a>思路:</h3><ol>
+<li>循环,根据输入值N的范围</li>
+<li>算法:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">			j  k</span><br><span class="line">			2&#x2F; 1</span><br><span class="line">j &#x3D; t &#x3D; j + k;k &#x3D; j;</span><br><span class="line">			3 &#x2F; 2</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>双精度double,小数点后两位%.2f</li>
+</ol>
+<h3 id="代码-10"><a href="#代码-10" class="headerlink" title="代码:"></a>代码:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">double</span> j = <span class="number">2.0</span>, t = <span class="number">0.0</span>, k = <span class="number">1.0</span>, sum = <span class="number">0.0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        sum += j / k;</span><br><span class="line">      <span class="comment">// 临时值t</span></span><br><span class="line">        t = j + k;</span><br><span class="line">        k = j;</span><br><span class="line">        j = t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%.2f"</span>,sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="约分最简公式"><a href="#约分最简公式" class="headerlink" title="约分最简公式"></a>约分最简公式</h2><ul>
+<li><p>分数可以表示为”分子/分母”的形式,用户输入一个分数时,将其约分成最简约分式,最简分式指分子和分母不具有继续约分的能力</p>
+</li>
+<li><p>当分子大于分母时,不需要表达成整数又分数的形式,原样输出就行,而当分子分母相等时表示为1/1的分数形式</p>
+</li>
+<li><p>输入格式:输入正整数w分数,分子与分母之间以/分割</p>
+</li>
+<li><p>在scanf的格式字符串值加入/就能让scanf来处理斜杠</p>
+</li>
+<li><p>输出格式:格式与输入相同,对应分数最简分式</p>
+<h3 id="思路-11"><a href="#思路-11" class="headerlink" title="思路:"></a>思路:</h3><p>之前做过<a href="#最大公约数">最大公约数</a>来着</p>
+<h3 id="代码-11"><a href="#代码-11" class="headerlink" title="代码:"></a>代码:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x,y;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d/%d"</span>,&amp;x,&amp;y);</span><br><span class="line">    <span class="keyword">int</span> a = x , b = y;</span><br><span class="line">    <span class="keyword">while</span> ( b !=  <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">int</span> t = a % b;</span><br><span class="line">        a = b; <span class="comment">// a为最大公约数</span></span><br><span class="line">        b = t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d/%d"</span>,x/a,y/a);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+          
+            <div class='article_footer'>
+              
+                
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://zhboat.ink/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3/>https://zhboat.ink/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3/</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-13T17:18:12+00:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年11月14日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-4/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C语言笔记(4)</p>
+                <p class='content'>for循环
+
+
+for格式除了看上去很像while,更像是进阶版的while循环
+说是功能等价while循环,倒不如说for循环是计数循环,当你设定一个计数器,初始化数值,在数值到达你设定的某个...</p>
+              </a>
+            
+            
+              <a class='next' href='/%E5%A4%9A%E5%B9%B3%E5%8F%B0hexo/'>
+                <p class='title'>多平台hexo<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>你不会还在本地部署hexo吧?
+
+
+众所周知,用hexo+gitpage能搭建很不错的博客,但是有个比较致命的缺点,不方便跨平台部署,当然你也可以选择将其部署至服务器,或者压缩拷贝
+就连back...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    
+
+  <article class="post white-box reveal comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      <section id="comments">
+        <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+      </section>
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#猜数游戏"><span class="toc-text">猜数游戏</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-text">思路:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#思路实现"><span class="toc-text">思路实现:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-text">代码:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算平均数"><span class="toc-text">算平均数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路-1"><span class="toc-text">思路:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#思路实现-1"><span class="toc-text">思路实现:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码-1"><span class="toc-text">代码:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#整数逆序"><span class="toc-text">整数逆序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路-2"><span class="toc-text">思路:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码-2"><span class="toc-text">代码:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#整数分解"><span class="toc-text">整数分解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路-3"><span class="toc-text">思路:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码-3"><span class="toc-text">代码:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最大公约数"><span class="toc-text">最大公约数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路-4"><span class="toc-text">思路:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码-4"><span class="toc-text">代码:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#给定条件整数集"><span class="toc-text">给定条件整数集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路-5"><span class="toc-text">思路:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码-5"><span class="toc-text">代码:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#水仙花数"><span class="toc-text">水仙花数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路-6"><span class="toc-text">思路:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码-6"><span class="toc-text">代码:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#九九乘法表"><span class="toc-text">九九乘法表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路-7"><span class="toc-text">思路:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码-7"><span class="toc-text">代码:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#统计素数求和"><span class="toc-text">统计素数求和</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路-8"><span class="toc-text">思路:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码-8"><span class="toc-text">代码:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#猜数游戏2"><span class="toc-text">猜数游戏2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路-9"><span class="toc-text">思路:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码-9"><span class="toc-text">代码:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前N项和"><span class="toc-text">前N项和</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路-10"><span class="toc-text">思路:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码-10"><span class="toc-text">代码:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#约分最简公式"><span class="toc-text">约分最简公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路-11"><span class="toc-text">思路:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码-11"><span class="toc-text">代码:</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+    </div>
+    
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='random'
+      fixed='true'
+      list-max-height='340px'
+      server='netease'
+      type='playlist'
+      id='140168575'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="mailto:me@zhboat@163.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/zhboat"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=135441066"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+      
+    
+      
+        Use
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/releases/tag/3.0.0-rc.2" target="_blank" class="codename">Volantis</a>
+        as theme, total visits
+          <span id="busuanzi_value_site_pv"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+          times
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2017-2020 柚木舟</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <div>
+    
+      
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick='document.execCommand("copy")'><i class='fa fa-copy fa-fw'></i>Copy Text</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>Copy Link</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>Open Link in New Tab</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>Copy Image Link</a>
+        <hr id='hr-src'>
+      </li>
+      <li class='navigation'>
+        <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+        <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+        <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+        <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+      </li>
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          copyText.style.display = 'block';
+          hrText.style.display = 'block';
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if (true == true) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper1.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper2.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper3.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper4.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper5.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper6.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper7.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper8.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper9.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper10.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper11.png", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper12.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper13.png", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper14.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper15.jpg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/00E0F0ED-9F1C-407A-9AA6-545649D919F4.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/landscape/AEB33F9D-7294-4CF1-B8C5-3020748A9D45.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/landscape/10A0FCE5-36A1-4AD0-8CF0-019259A89E03.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/landscape/298468D7-E388-44A8-8CC5-8213BDC33CED.jpeg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "13000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "13000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  <script>
+    let APlayerController = new Object();
+    APlayerController.id = '140168575';  // 设定全局音乐播放ID
+    APlayerController.volume = '0.7';
+  </script>
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
+
+  
+    
+<script src="/js/aplayer.js"></script>
+
+  
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    let pageUrl = $.trim($('#pjax-comment-path').text()) === "none" ? 
+      decodeURI(window.location.pathname) : $.trim($('#pjax-comment-path').text());
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) === "none" ?
+      "快来评论吧~" : $.trim($('#pjax-comment-placeholder').text());
+
+    let ALLPATH = '';
+    if(ALLPATH != '') pageUrl = ALLPATH;
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: pageUrl,
+      appId: "a5zTWlPcQKYAgvKcX73pEYNB-gzGzoHsz",
+      appKey: "q0mihhtI9WJg37rMgDqXyJ2A",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps
+    })
+  }
+
+  $(function () {
+    pjax_valine();
+  });
+</script>
+
+
+
+
+<!-- darkmodejs -->
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+<!-- scrollreveal -->
+
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    function pjax_scrollrebeal() {
+      ScrollReveal().reveal('.l_main .reveal', {
+        distance: '32px',
+        duration: '800',
+        interval: '20',
+        scale: '1',
+        easing: 'ease-out'
+      });
+    }
+
+    $(function () {
+      pjax_scrollrebeal();
+    });
+  </script>
+
+<!-- ******************************** -->
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  function pjax_fancybox() {
+    $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".article-entry").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
+</script>
+
+<!-- ******************************** -->
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+
+
+
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+
+      try{
+        pjax_fancybox();
+        
+          
+          if ('.cover') {
+            $('.cover').backstretch("resize");
+          } else {
+            $.backstretch("resize");
+          }
+        
+        
+        
+          pjax_scrollrebeal();
+        
+        
+          pjax_initCopyCode();
+        
+        
+          pjax_valine();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/nico.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

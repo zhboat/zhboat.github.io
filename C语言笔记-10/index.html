@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/releases/tag/3.0.0-rc.2'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>C语言笔记(10) - 柚子的随记</title>
+  
+    <meta name="keywords" content="C">
+  
+
+  
+    <meta name="description" content="枚举 (Enumer)">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic/pictures/favicon.png">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+  
+</head>
+
+<body>
+  
+  
+  
+  <div class="cover-wrapper">
+    <cover class='cover post' style="display: none;">
+      <div class='cover-body'>
+  <div class='a'>
+    
+    
+      <p class="title">柚子的随记</p>
+    
+    
+  </div>
+  <div class='b'>
+    <div class='menu navigation focus'>
+      <div class='list-h'>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+    </cover>
+    <header class="l_header shadow blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  </div>
+  
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper' id="pjax-container">
+      
+        <!--此文件用来存放一些不方便取值的变量--> 
+<!--思路大概是将值藏到重加载的区域内--> 
+ 
+ 
+ 
+<div id="pjax-data" style="display: none"> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">C语言笔记(10)</div> 
+  <div id="pjax-enable-cover">true</div> 
+  <div id="pjax-comment-path">none</div> 
+  <div id="pjax-comment-placeholder">none</div> 
+</div> 
+ 
+ 
+<script> 
+  // 处理封面 此时 jquery 还没加载 
+  if ("none" == "none") { // 移除封面 
+    document.getElementsByClassName('cover')[0].style.display = "none"; 
+    document.getElementsByClassName('l_body')[0].classList.add("nocover"); 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
+  } else { 
+    if ("none" == "blog") { // 半屏 
+      document.getElementsByClassName('cover')[0].classList.remove("full"); 
+      document.getElementsByClassName('cover')[0].classList.add("half"); 
+      document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
+    } else if ("none" == "docs") { // 全屏 
+      document.getElementsByClassName('cover')[0].classList.remove("half"); 
+      document.getElementsByClassName('cover')[0].classList.add("full"); 
+      document.getElementsByClassName('scroll-down')[0].style.display = ""; 
+    } 
+    document.getElementsByClassName('cover')[0].style.display = ""; 
+    document.getElementsByClassName('l_body', 'show')[0].classList.remove("nocover"); 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show"); 
+  } 
+</script> 
+
+      
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  <h1 class="title">
+    <a href="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-10/">
+      C语言笔记(10)
+    </a>
+  </h1>
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a class='author' href="" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic/pictures/favicon.png">
+    <p>柚木舟</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年6月9日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <h3 id="枚举-Enumer"><a href="#枚举-Enumer" class="headerlink" title="枚举 (Enumer)"></a>枚举 (Enumer)</h3><a id="more"></a>
+
+<p>枚举是一种用户定义基本数据类型,使用关键字enum声明,主要用于排比一系列有意义的名字</p>
+<h4 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h4><p><code>enum 枚举名 {枚举元素1,枚举元素2,...}</code></p>
+<p>枚举元素只能是int类型,可以作为常量符号使用</p>
+<p>枚举可以让独立定义的连续常量更简洁化</p>
+<p>例如</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> zero = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> one = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> two = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> three = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+
+<p>可以使用枚举写成<code>enum number{zero,one,two,three}</code></p>
+<p>第一个枚举元素默认从0开始,你可以指定第一个从任意数字开始,后面依次排列</p>
+<h4 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h4><p>枚举的元素可以作为值去使用,而枚举类型可以带上enum作为数据类型,犹如int、double这种数据类型一样,还可以以整数的方式做内部计算和外部的输入输出</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">enum</span> number &#123; one = <span class="number">1</span>, two, three &#125;; <span class="comment">// 声明number类型的数据类型</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">enum</span> number x)</span></span>; <span class="comment">// 声明f函数需要一个number类型的参数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">enum</span> number t = <span class="number">0</span>; <span class="comment">// 初始化number类型的临时变量t</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span> , &amp;t);</span><br><span class="line">    f(t); <span class="comment">// 传递t的值到f函数</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">enum</span> number x)</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, x);  <span class="comment">// 输出number类型的x变量</span></span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结构体-Struct"><a href="#结构体-Struct" class="headerlink" title="结构体 (Struct)"></a>结构体 (Struct)</h3><p>可以理解成可以存放不同数据类型的数组,一个结构中包含了多个成员的数据类型</p>
+<p><font color=#90e>⇩长代码警告!</font></p>
+<h4 id="结构类型"><a href="#结构类型" class="headerlink" title="结构类型"></a>结构类型</h4><p>结构类型需要使用struct语句,定义变量时需要带上struct以及结构类型名称</p>
+<h5 id="格式-1"><a href="#格式-1" class="headerlink" title="格式"></a>格式</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明结构</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> 结构体类型名称 &#123;</span> </span><br><span class="line">    成员变量;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 定义变量</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> 结构体类型名称 变量名;</span></span><br></pre></td></tr></table></figure>
+
+<p>也可以写成下面这样,它们的意思是一样的</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明结构并定义变量</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> 结构体类型名称 &#123;</span> </span><br><span class="line">    成员变量;</span><br><span class="line">&#125;变量名;</span><br></pre></td></tr></table></figure>
+
+<p>每个变量名都包含结构变量的所有内容,当你要对变量赋值时,需要对应结构体中的成员变量类型</p>
+<h5 id="结构运算"><a href="#结构运算" class="headerlink" title="结构运算"></a>结构运算</h5><p>与数组一样,当需要访问结构成员时,使用<code>变量名 .成员变量</code>的方式</p>
+<p>要访问整个结构的时候直接用结构变量的名称就行</p>
+<p>对于整个结构,可以做赋值,取地址的操作,还可以传递给函数参数</p>
+<h5 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h5><p>在定义变量的时候就初始化结构内容</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明结构并定义变量</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">number</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> one;</span><br><span class="line">    <span class="keyword">int</span> two;</span><br><span class="line">    <span class="keyword">int</span> three;</span><br><span class="line">&#125; demo;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 初始化变量struct number类型的变量demo的值为one = 10,two = 20,three = 30</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">number</span> <span class="title">demo</span> = &#123;</span><span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>&#125;;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"one = %i,two = %i, three = %i"</span>, demo.one, demo.two, demo.three);</span><br><span class="line">    <span class="comment">// one = 10,two = 20, three = 30</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>还可以用另一种方式去初始化</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明结构并定义变量</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">number</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> one;</span><br><span class="line">    <span class="keyword">int</span> two;</span><br><span class="line">    <span class="keyword">int</span> three;</span><br><span class="line">&#125;demo;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 初始化变量struct number类型的变量demo的值为one = 10,two = 20,three = 30</span></span><br><span class="line">    demo = (struct number)&#123;<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>&#125;;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"one = %i,two = %i, three = %i"</span>, demo.one, demo.two, demo.three);</span><br><span class="line">    <span class="comment">// one = 10,two = 20, three = 30</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>甚至你还可以像数组一样对单个成员变量初始化</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="comment">// 声明结构并定义变量</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">number</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> one;</span><br><span class="line">    <span class="keyword">int</span> two;</span><br><span class="line">    <span class="keyword">int</span> three;</span><br><span class="line">&#125;demo;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   <span class="comment">// 初始化变量struct number类型的变量demo的值为one = 10,three = 30,而没有给值的two默认为0</span></span><br><span class="line">    demo = (struct number)&#123;.one = <span class="number">10</span>, .three = <span class="number">30</span>&#125;;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"one = %i,two = %i, three = %i"</span></span><br><span class="line">            , demo.one, demo.two, demo.three);</span><br><span class="line">   <span class="comment">// one = 10,two = 0, three = 30</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="结构指针"><a href="#结构指针" class="headerlink" title="结构指针"></a>结构指针</h5><p>与数组不同的是,结构变量的名称并不是结构变量的地址,所以在访问结构变量在内存中的的地址时,需要用到取地址符<code>&amp;</code></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">number</span> *<span class="title">p</span> = &amp;<span class="title">demo</span>;</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"demo = %p"</span>, p); <span class="comment">// demo = 0x10c62b010</span></span><br></pre></td></tr></table></figure>
+
+<p>需要用指针指向结构内容时,可以用到一个新的运算符<code>-&gt;</code></p>
+<p>意为将指针指向结构的成员</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明结构并定义变量</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">number</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> two;</span><br><span class="line">&#125;demo;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 初始化变量struct number类型的变量demo的值为two = 20</span></span><br><span class="line">    demo = (struct number)&#123; <span class="number">20</span> &#125;;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"two = %i\n"</span>, demo.two);     <span class="comment">// two = 20</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">number</span> *<span class="title">p</span> = &amp;<span class="title">demo</span>;</span> <span class="comment">// 让指针p指向结构变量demo的地址</span></span><br><span class="line">    <span class="comment">// 使用指针p去修改结构成员的值</span></span><br><span class="line">    p -&gt; two = <span class="number">200</span>; <span class="comment">// == demo.two = 200; == (*p).two = 200 ;</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"two = %i"</span>, p-&gt;two);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>学生表</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> studentID;</span><br><span class="line">    <span class="keyword">char</span> *name;</span><br><span class="line">    <span class="keyword">char</span> *sex;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">&#125;first;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">//struct student first;</span></span><br><span class="line">    first = (struct student)</span><br><span class="line">            &#123;<span class="number">1003</span>,<span class="string">"张三"</span>,<span class="string">"男"</span>,<span class="number">19</span>&#125;;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"名字\t性别\t年龄\t学号\t\n%s\t%s\t%i\t%i"</span></span><br><span class="line">    ,first.name, first.sex, first.age, first.studentID);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="结构函数"><a href="#结构函数" class="headerlink" title="结构函数"></a>结构函数</h4><p>整个结构可以作为参数的值传入函数</p>
+<p>当传递的是一个结构时,在函数中是新建了一个结构变量,并复制了调用者的结构的值</p>
+<p>这个函数的返回类型可以是一个结构</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 判断是否为闰年，如果是闰年让今年的2月变成29天</span></span><br><span class="line"><span class="comment"> * 明天的日期根据用户输入的值去改变*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdbool.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">date</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> month;</span><br><span class="line">    <span class="keyword">int</span> day;</span><br><span class="line">    <span class="keyword">int</span> year;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">numberofDays</span><span class="params">(struct date d)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isLeap</span><span class="params">(struct date d)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">date</span> <span class="title">today</span>, <span class="title">tomorrow</span>;</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Enter today's date (mm-dd-yy):"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%i-%i-%i"</span>, &amp;today.month, &amp;today.day, &amp;today.year);</span><br><span class="line">    <span class="comment">// 当今天的日期不等于num函数返回的结果时</span></span><br><span class="line">    <span class="keyword">if</span> (today.day != numberofDays(today)) &#123;  <span class="comment">// num函数调用主函数中的结构变量today</span></span><br><span class="line">        <span class="comment">// 明天的日期就+1，月和年保持不变</span></span><br><span class="line">        tomorrow.day = today.day + <span class="number">1</span>;</span><br><span class="line">        tomorrow.month = today.month;</span><br><span class="line">        tomorrow.year = today.year;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (today.month == <span class="number">12</span>) &#123;</span><br><span class="line">        <span class="comment">// 当今年的月份是十二月并且不满足上个if时</span></span><br><span class="line">        <span class="comment">// 明天的日期变成1，月份变成1，年份加一</span></span><br><span class="line">        tomorrow.day = <span class="number">1</span>;</span><br><span class="line">        tomorrow.month = <span class="number">1</span>;</span><br><span class="line">        tomorrow.year = today.year + <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 综上条件都不满足，即在月末的最后一天</span></span><br><span class="line">        <span class="comment">// 明天的日期变成1，月份加一，年份不变</span></span><br><span class="line">        tomorrow.day = <span class="number">1</span>;</span><br><span class="line">        tomorrow.month = today.month + <span class="number">1</span>;</span><br><span class="line">        tomorrow.year = today.year;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Tomorrow'date is %i-%i-%i"</span>,</span><br><span class="line">           tomorrow.month, tomorrow.day, tomorrow.year);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * NumberOfDays函数的目的是算出月末的最后一天*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">numberofDays</span><span class="params">(struct date d)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> days;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> dayspermonth[<span class="number">12</span>] = &#123;</span><br><span class="line">            <span class="number">31</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">if</span> (d.month == <span class="number">2</span> &amp;&amp; isLeap(d)) &#123; <span class="comment">// 如果这个月是2月份，并且isLeap函数返回的是true</span></span><br><span class="line">        days = <span class="number">29</span>; <span class="comment">// 就让days变成29</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        days = dayspermonth[d.month - <span class="number">1</span>]; <span class="comment">// 如果不是2月份就让days变成数组中与月份对应的日子</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> days;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * isLeap函数的作用是判断是否是闰年</span></span><br><span class="line"><span class="comment"> * 返回值默认是false，如果是闰年就返回true*/</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isLeap</span><span class="params">(struct date d)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">bool</span> leap = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span> ((d.year % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; d.year % <span class="number">100</span> != <span class="number">0</span>) || d.year % <span class="number">400</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        leap = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> leap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="结构数组"><a href="#结构数组" class="headerlink" title="结构数组"></a>结构数组</h4><p>声明结构数组:<code>struct 结构体类型名称 成员变量[数组元素个数]</code>例如</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">time</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> hour;</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">min</span>;</span><br><span class="line">    <span class="keyword">int</span> seconds;</span><br><span class="line">&#125;NowTime;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">time</span> <span class="title">NowTime</span>[5] = &#123;</span></span><br><span class="line">            <span class="comment">// NowTime[0] = ((NowTime.hour = 11),(NowTime.min = 59),(NowTime.seconds = 59))</span></span><br><span class="line">            &#123;<span class="number">11</span>,<span class="number">59</span>,<span class="number">59</span>&#125;,</span><br><span class="line">            <span class="comment">// NowTime[1] = ((NowTime.hour = 12),(NowTime.min = 0),(NowTime.seconds = 0))</span></span><br><span class="line">            &#123;<span class="number">12</span>,<span class="number">0</span>,<span class="number">0</span>&#125;,</span><br><span class="line">      			<span class="comment">// ...以此类推</span></span><br><span class="line">            &#123;<span class="number">1</span>,<span class="number">59</span>,<span class="number">29</span>&#125;,</span><br><span class="line">            &#123;<span class="number">23</span>,<span class="number">59</span>,<span class="number">59</span>&#125;,</span><br><span class="line">            &#123;<span class="number">19</span>,<span class="number">50</span>,<span class="number">29</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 定义一个结构数组，分别存放小时分钟秒</span></span><br><span class="line"><span class="comment"> * 遍历数组，输出每一个数组元素</span></span><br><span class="line"><span class="comment"> * 定义第二个函数，作用是算出当前时间的下一秒的时间*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明结构</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">time</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> hour;</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">min</span>;</span><br><span class="line">    <span class="keyword">int</span> seconds;</span><br><span class="line">&#125; NowTime;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明函数</span></span><br><span class="line"><span class="function">struct time <span class="title">LaterTime</span><span class="params">(struct time now)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 常量CURT的值是5</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> CURT = <span class="number">5</span>;</span><br><span class="line">    <span class="comment">// 初始化结构数组</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">time</span> <span class="title">NowTime</span>[<span class="title">CURT</span>] = &#123;</span></span><br><span class="line">            <span class="comment">// NowTime[0] = ((NowTime.hour = 11),(NowTime.min = 59),(NowTime.seconds = 59))</span></span><br><span class="line">            &#123;<span class="number">11</span>, <span class="number">59</span>, <span class="number">59</span>&#125;,</span><br><span class="line">            &#123;<span class="number">12</span>, <span class="number">0</span>,  <span class="number">0</span>&#125;,</span><br><span class="line">            &#123;<span class="number">1</span>,  <span class="number">59</span>, <span class="number">29</span>&#125;,</span><br><span class="line">            &#123;<span class="number">23</span>, <span class="number">59</span>, <span class="number">59</span>&#125;,</span><br><span class="line">            &#123;<span class="number">19</span>, <span class="number">50</span>, <span class="number">29</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">time</span> *<span class="title">p</span> = <span class="title">NowTime</span>;</span>  <span class="comment">// 定义struct time类型的指针变量p</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; CURT; i++) &#123;</span><br><span class="line">        *p = NowTime[i]; <span class="comment">// 让指针变量p指向结构数组NowTime，每轮循环让NowTime[0+i]</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Nowtime is %.2i:%.2i:%.2i"</span>,</span><br><span class="line">               p-&gt;hour, p-&gt;<span class="built_in">min</span>, p-&gt;seconds); <span class="comment">// 指针变量p指向每个结构成员</span></span><br><span class="line">        *p = LaterTime(*p); <span class="comment">// 让指针变量p指向函数LaterTime，参数是NowTime[0+i]</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"...One seconds later its %.2i:%.2i:%.2i\n"</span>,</span><br><span class="line">               p-&gt;hour, p-&gt;<span class="built_in">min</span>, p-&gt;seconds);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">struct time <span class="title">LaterTime</span><span class="params">(struct time now)</span> </span>&#123;</span><br><span class="line">    ++now.seconds;</span><br><span class="line">    <span class="keyword">if</span> (now.seconds == <span class="number">60</span>) &#123;</span><br><span class="line">        now.seconds = <span class="number">0</span>;</span><br><span class="line">        ++now.<span class="built_in">min</span>;</span><br><span class="line">        <span class="keyword">if</span> (now.<span class="built_in">min</span> == <span class="number">60</span>) &#123;</span><br><span class="line">            now.<span class="built_in">min</span> = <span class="number">0</span>;</span><br><span class="line">            ++now.hour;</span><br><span class="line">            <span class="keyword">if</span> (now.hour == <span class="number">24</span>) &#123;</span><br><span class="line">                now.hour = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> now;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="嵌套结构-禁止套娃"><a href="#嵌套结构-禁止套娃" class="headerlink" title="嵌套结构(禁止套娃!)"></a>嵌套结构(禁止套娃!)</h4><p>既然结构内可以是不同类型的数据,那么也可以是结构类型的数据</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">aAndb</span>&#123;</span></span><br><span class="line">		<span class="class"><span class="keyword">struct</span> <span class="title">a</span> <span class="title">dataa</span>;</span></span><br><span class="line">		<span class="class"><span class="keyword">struct</span> <span class="title">b</span> <span class="title">datab</span>;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><font color=red>空间想象力太差了,告辞</font></p>
+<p>复用的时候看作文件夹与快捷键就行</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/06-10_22:25.png" alt="06-10_22:25"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">point</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">    <span class="keyword">int</span> y;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">rectangle</span> &#123;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">point</span> <span class="title">p1</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">point</span> <span class="title">p2</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printRect</span><span class="params">(struct rectangle r)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"&lt;%d,%d&gt; to &lt;%d,%d&gt;\n"</span>,</span><br><span class="line">           r.p1.x, r.p1.y, r.p2.x, r.p2.y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">rectangle</span> <span class="title">rects</span>[] = &#123;</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">             * rects[0] r.p1.x = 1,r.p1.y = 2</span></span><br><span class="line"><span class="comment">             * rects[0] r.p2.x = 3,r.p2.y = 4</span></span><br><span class="line"><span class="comment">             * rects[1] r.p1.x = 5,r.p1.y = 6</span></span><br><span class="line"><span class="comment">             * rects[1] r.p2.x = 7,r.p2.y = 8 */</span></span><br><span class="line"></span><br><span class="line">            &#123;&#123;<span class="number">1</span>, <span class="number">2</span>&#125;, &#123;<span class="number">3</span>, <span class="number">4</span>&#125;&#125;,</span><br><span class="line">            &#123;&#123;<span class="number">5</span>, <span class="number">6</span>&#125;, &#123;<span class="number">7</span>, <span class="number">8</span>&#125;&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++) &#123;</span><br><span class="line">        printRect(rects[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="TypeDef"><a href="#TypeDef" class="headerlink" title="TypeDef"></a>TypeDef</h4><p>使用typedef可以自定义数据类型的名称,让其变成新的别名</p>
+<p>复杂的名字化繁为简,重载已有的类型名称,新名称的含义更清晰更具有移植性</p>
+<p>还能够替代数据类型出现在变量定于和参数声明</p>
+<p>使用typedef最后的单词就是该类型的新名称</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> abc; <span class="comment">// 将int类型定义别名为abc</span></span><br><span class="line">abc a,b,c; <span class="comment">// 等价于int a,b,c</span></span><br><span class="line">abc number[<span class="number">5</span>]; <span class="comment">// 等价于int number[5]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">student</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> studentID;</span><br><span class="line">    <span class="keyword">char</span> *name;</span><br><span class="line">    <span class="keyword">char</span> *sex;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">&#125;aaa; </span><br><span class="line">aaa zhangsan = &#123;<span class="number">111</span>,<span class="string">"zhangsan"</span>,<span class="string">"nan"</span>,<span class="number">17</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="union-联合"><a href="#union-联合" class="headerlink" title="union(联合)"></a>union(联合)</h4><p>联合是一种特殊的数据类型,允许在相同的内存位置存储不同的数据类型</p>
+<p>可以定义一个带有多成员的联合体,但是任何时候只能有一个成员带有值,联合体提供了一种使用相同的内存位置的有效方式</p>
+<p>它的语法和结构一样,但是每个成员是共享一个空间</p>
+<p>而且同一时间只有一个成员是有效的,union整体的空间大小就是最大的那个成员</p>
+<p>所以你不能同时输出联合体中的所有成员的值</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">union</span> Data &#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">float</span> f;</span><br><span class="line">    <span class="keyword">char</span> str[<span class="number">20</span>];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">union</span> Data data;</span><br><span class="line"></span><br><span class="line">    data.i = <span class="number">10</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"data.i : %d\n"</span>, data.i);</span><br><span class="line"></span><br><span class="line">    data.f = <span class="number">220.5</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"data.f : %f\n"</span>, data.f);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">strcpy</span>(data.str, <span class="string">"Hello,World"</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"data.str : %s\n"</span>, data.str);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+            <div class='article_footer'>
+              
+                
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://zhboat.ink/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-10/>https://zhboat.ink/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-10/</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-13T17:18:12+00:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年11月14日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-11/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C语言笔记(11)</p>
+                <p class='content'>无题
+
+
+全局变量
+定义在函数外面的变量就是全局变量
+全局变量具有全局的生存期和作用域
+它们与任何函数都没有关系,但是在任何函数的内部都可以使用它们
+全局变量默认初始化值是0,指针变量会得到NU...</p>
+              </a>
+            
+            
+              <a class='next' href='/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-9/'>
+                <p class='title'>C语言笔记(9)<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>字符串
+
+
+字符串是以字符数组的方式存在的
+
+不能对其用运算符做运算
+
+通过数组的方式可以遍历字符串
+
+可以通过字符串常量去初始化字符数组
+
+
+字符数组
+以0结尾的一串字符
+
+0标志字符串的结束...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    
+
+  <article class="post white-box reveal comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      <section id="comments">
+        <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+      </section>
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#枚举-Enumer"><span class="toc-text">枚举 (Enumer)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#格式"><span class="toc-text">格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输入输出"><span class="toc-text">输入输出</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结构体-Struct"><span class="toc-text">结构体 (Struct)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#结构类型"><span class="toc-text">结构类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#格式-1"><span class="toc-text">格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#结构运算"><span class="toc-text">结构运算</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#初始化"><span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#结构指针"><span class="toc-text">结构指针</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#结构函数"><span class="toc-text">结构函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#结构数组"><span class="toc-text">结构数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#嵌套结构-禁止套娃"><span class="toc-text">嵌套结构(禁止套娃!)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TypeDef"><span class="toc-text">TypeDef</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#union-联合"><span class="toc-text">union(联合)</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+    </div>
+    
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='random'
+      fixed='true'
+      list-max-height='340px'
+      server='netease'
+      type='playlist'
+      id='140168575'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="mailto:me@zhboat@163.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/zhboat"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=135441066"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+      
+    
+      
+        Use
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/releases/tag/3.0.0-rc.2" target="_blank" class="codename">Volantis</a>
+        as theme, total visits
+          <span id="busuanzi_value_site_pv"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+          times
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2017-2020 柚木舟</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <div>
+    
+      
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick='document.execCommand("copy")'><i class='fa fa-copy fa-fw'></i>Copy Text</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>Copy Link</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>Open Link in New Tab</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>Copy Image Link</a>
+        <hr id='hr-src'>
+      </li>
+      <li class='navigation'>
+        <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+        <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+        <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+        <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+      </li>
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          copyText.style.display = 'block';
+          hrText.style.display = 'block';
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if (true == true) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper1.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper2.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper3.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper4.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper5.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper6.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper7.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper8.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper9.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper10.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper11.png", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper12.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper13.png", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper14.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper15.jpg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/00E0F0ED-9F1C-407A-9AA6-545649D919F4.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/landscape/AEB33F9D-7294-4CF1-B8C5-3020748A9D45.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/landscape/10A0FCE5-36A1-4AD0-8CF0-019259A89E03.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/landscape/298468D7-E388-44A8-8CC5-8213BDC33CED.jpeg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "13000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "13000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  <script>
+    let APlayerController = new Object();
+    APlayerController.id = '140168575';  // 设定全局音乐播放ID
+    APlayerController.volume = '0.7';
+  </script>
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
+
+  
+    
+<script src="/js/aplayer.js"></script>
+
+  
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    let pageUrl = $.trim($('#pjax-comment-path').text()) === "none" ? 
+      decodeURI(window.location.pathname) : $.trim($('#pjax-comment-path').text());
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) === "none" ?
+      "快来评论吧~" : $.trim($('#pjax-comment-placeholder').text());
+
+    let ALLPATH = '';
+    if(ALLPATH != '') pageUrl = ALLPATH;
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: pageUrl,
+      appId: "a5zTWlPcQKYAgvKcX73pEYNB-gzGzoHsz",
+      appKey: "q0mihhtI9WJg37rMgDqXyJ2A",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps
+    })
+  }
+
+  $(function () {
+    pjax_valine();
+  });
+</script>
+
+
+
+
+<!-- darkmodejs -->
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+<!-- scrollreveal -->
+
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    function pjax_scrollrebeal() {
+      ScrollReveal().reveal('.l_main .reveal', {
+        distance: '32px',
+        duration: '800',
+        interval: '20',
+        scale: '1',
+        easing: 'ease-out'
+      });
+    }
+
+    $(function () {
+      pjax_scrollrebeal();
+    });
+  </script>
+
+<!-- ******************************** -->
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  function pjax_fancybox() {
+    $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".article-entry").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
+</script>
+
+<!-- ******************************** -->
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+
+
+
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+
+      try{
+        pjax_fancybox();
+        
+          
+          if ('.cover') {
+            $('.cover').backstretch("resize");
+          } else {
+            $.backstretch("resize");
+          }
+        
+        
+        
+          pjax_scrollrebeal();
+        
+        
+          pjax_initCopyCode();
+        
+        
+          pjax_valine();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/nico.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

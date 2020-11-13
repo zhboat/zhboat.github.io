@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/releases/tag/3.0.0-rc.2'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>C语言笔记(8) - 柚子的随记</title>
+  
+    <meta name="keywords" content="C">
+  
+
+  
+    <meta name="description" content="指针">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic/pictures/favicon.png">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+  
+</head>
+
+<body>
+  
+  
+  
+  <div class="cover-wrapper">
+    <cover class='cover post' style="display: none;">
+      <div class='cover-body'>
+  <div class='a'>
+    
+    
+      <p class="title">柚子的随记</p>
+    
+    
+  </div>
+  <div class='b'>
+    <div class='menu navigation focus'>
+      <div class='list-h'>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+    </cover>
+    <header class="l_header shadow blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  </div>
+  
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper' id="pjax-container">
+      
+        <!--此文件用来存放一些不方便取值的变量--> 
+<!--思路大概是将值藏到重加载的区域内--> 
+ 
+ 
+ 
+<div id="pjax-data" style="display: none"> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">C语言笔记(8)</div> 
+  <div id="pjax-enable-cover">true</div> 
+  <div id="pjax-comment-path">none</div> 
+  <div id="pjax-comment-placeholder">none</div> 
+</div> 
+ 
+ 
+<script> 
+  // 处理封面 此时 jquery 还没加载 
+  if ("none" == "none") { // 移除封面 
+    document.getElementsByClassName('cover')[0].style.display = "none"; 
+    document.getElementsByClassName('l_body')[0].classList.add("nocover"); 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
+  } else { 
+    if ("none" == "blog") { // 半屏 
+      document.getElementsByClassName('cover')[0].classList.remove("full"); 
+      document.getElementsByClassName('cover')[0].classList.add("half"); 
+      document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
+    } else if ("none" == "docs") { // 全屏 
+      document.getElementsByClassName('cover')[0].classList.remove("half"); 
+      document.getElementsByClassName('cover')[0].classList.add("full"); 
+      document.getElementsByClassName('scroll-down')[0].style.display = ""; 
+    } 
+    document.getElementsByClassName('cover')[0].style.display = ""; 
+    document.getElementsByClassName('l_body', 'show')[0].classList.remove("nocover"); 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show"); 
+  } 
+</script> 
+
+      
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  <h1 class="title">
+    <a href="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-8/">
+      C语言笔记(8)
+    </a>
+  </h1>
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a class='author' href="" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic/pictures/favicon.png">
+    <p>柚木舟</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年6月2日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><a id="more"></a>
+
+<h4 id="取地址"><a href="#取地址" class="headerlink" title="取地址"></a>取地址</h4><p>内存分配的任务是通过指针去执行的,每一个变量在内存中都会有一个位置,可以通过<code>&amp;</code> 运算符去访问变量在内存中的地址</p>
+<p>地址的大小是否与int相同取决于编译器</p>
+<h5 id="运算符-amp"><a href="#运算符-amp" class="headerlink" title="运算符&amp;"></a>运算符&amp;</h5><p>获得变量的地址,它的操作数必须是变量</p>
+<p><code>scanf(&quot;%d&quot;, &amp;x);</code></p>
+<p>&amp;只能对一个明确的变量去取地址,不能对没有地址的东西取地址(包括表达式和运算)</p>
+<h5 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h5><p><code>%p</code> 可以输出变量的地址</p>
+<p> <code>printf(&quot;%p&quot;, &amp;x);</code> 输出x变量在内存中的地址</p>
+<h5 id="相邻变量的地址"><a href="#相邻变量的地址" class="headerlink" title="相邻变量的地址"></a>相邻变量的地址</h5><p>本地变量在内存存放在堆栈里,堆栈是自顶向下分配的,先定义的变量在后定义变量的上方,紧紧相连,但地址间隔着一个int大小的字节</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> j;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%p\n"</span>, &amp;i); <span class="comment">// 0x7ffee5e29b58</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%p"</span>, &amp;j);  <span class="comment">// 0x7ffee5e29b54</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="数组的地址"><a href="#数组的地址" class="headerlink" title="数组的地址"></a>数组的地址</h5><p>整个数组的地址与数组中第一个元素即<code>x[0]</code>相同</p>
+<p>相邻的数组元素的地址相隔一个int的字节</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x[<span class="number">5</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%p\n"</span>, &amp;x);       <span class="comment">// 0x7ffee5dd7b40</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%p\n"</span>, &amp;x[<span class="number">0</span>]);    <span class="comment">// 0x7ffee5dd7b40</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%p\n"</span>, &amp;x[<span class="number">1</span>]);    <span class="comment">// 0x7ffee5dd7b44</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="指针-1"><a href="#指针-1" class="headerlink" title="指针"></a>指针</h4><p><strong><em>保存地址的变量</em></strong></p>
+<p>指针是一个变量,其值为另一个变量的地址,即内存位置的直接地址 就像其他变量或常量一样,必须在使用指针存储其他变量地址之前,对其进行声明</p>
+<h5 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h5><p><code>数据类型</code> *<code>变量名</code> = &amp;<code>变量名</code></p>
+<p><code>int *p = &amp;x;</code>变量p的值存储着变量x在内存中的地址</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> *p = &amp;x;</span><br><span class="line">  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%p\n"</span>, &amp;x); <span class="comment">// 0x7ffee2330b58</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%p\n"</span>, p); <span class="comment">// 0x7ffee2330b58</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>而<code>int *p,i;</code>是定义了一个指针类型p和int类型i,并非两个都是指针,需要二者都是指针时需要在第二个变量前也加上*</p>
+<h5 id="指针变量"><a href="#指针变量" class="headerlink" title="指针变量"></a>指针变量</h5><p>指针变量的值就是普通变量在内存的地址,而普通变量的值是实际意义上的值</p>
+<h5 id="指针作为参数"><a href="#指针作为参数" class="headerlink" title="指针作为参数"></a>指针作为参数</h5><p><code>int i = 0;x(&amp;i);</code>  把变量i在内存中的地址通过传参的方式传递给函数x</p>
+<p><code>void x(int *p)</code>在被调用的时候得到了变量i的地址</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">x</span><span class="params">(<span class="keyword">int</span> *p)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"&amp;i = %p\n"</span>, &amp;i); <span class="comment">// 0x7ffee3744b58</span></span><br><span class="line">    x(&amp;i);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">x</span><span class="params">(<span class="keyword">int</span> *p)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"p = %p\n"</span>, p);  <span class="comment">// 0x7ffee3744b58</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="通过指针访问变量"><a href="#通过指针访问变量" class="headerlink" title="通过指针访问变量"></a>通过指针访问变量</h5><p>*是一个弹幕运算符,可以用来访问指针的值(变量的地址)所表示的变量的值</p>
+<p>指针类型的变量可以作为左值也可以作为右值,与上一篇笔记中谈到的数组一样,当它在左边时是作为写入的方式,在右边时是被读取</p>
+<p>左值与右值并非变量而是特殊的值,是表达式计算的结果</p>
+<p><code>int i = *p</code> 把指针p所指向的变量的值赋值给i</p>
+<p><code>*p = i + 1;</code> i + 1的值赋值给指针p所指向的变量的值</p>
+<p>有点绕,但是不难理解~</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">x</span><span class="params">(<span class="keyword">int</span> *p)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"&amp;i = %p\n"</span>, &amp;i); <span class="comment">// 0x7ffee3744b58</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"i = %d\n"</span>, i);   <span class="comment">// 1</span></span><br><span class="line">    x(&amp;i);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">x</span><span class="params">(<span class="keyword">int</span> *p)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"p = %p\n"</span>, p);   <span class="comment">// 0x7ffee3744b58</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"*p = %d\n"</span>, *p); <span class="comment">// 1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>⇩因为传递给x的是i在内存中的地址,所以当我们修改*p也就是修改变量i在内存中地址上实际的值即 <code>*p= i = 2</code></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">x</span><span class="params">(<span class="keyword">int</span> *p)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"&amp;i = %p\n"</span>, &amp;i); <span class="comment">// 0x7ffee3744b58</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"i = %d\n"</span>, i);   <span class="comment">// 1</span></span><br><span class="line">    x(&amp;i);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"i = %d\n"</span>, i);   <span class="comment">// 2</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">x</span><span class="params">(<span class="keyword">int</span> *p)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"p = %p\n"</span>, p);   <span class="comment">// 0x7ffee3744b58</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"*p = %d\n"</span>, *p); <span class="comment">// 1</span></span><br><span class="line">    *p = <span class="number">2</span>; 								 <span class="comment">// 将2的值赋值给了实际变量i</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="amp-互相反作用"><a href="#amp-互相反作用" class="headerlink" title="&amp;*互相反作用"></a>&amp;*互相反作用</h5><ul>
+<li>*&amp;</li>
+</ul>
+<p><code>new = *&amp;i</code>  =  <code>new = *(&amp;i)</code>  = <code>new = *(0x7ffee3744b58)</code> = <code>new = i</code></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"&amp;i = %p\n"</span>, &amp;i); <span class="comment">// 0x7ffee3744b58</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"i = %d\n"</span>, i);   <span class="comment">// 1</span></span><br><span class="line">    <span class="keyword">int</span> *p = &amp;i;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"*p = %p\n"</span>, p);  <span class="comment">// 0x7ffee3744b58</span></span><br><span class="line">    <span class="keyword">int</span> <span class="keyword">new</span> = *&amp;i;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"new = %d"</span>, <span class="keyword">new</span>); <span class="comment">// 1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>&amp;*同理</li>
+</ul>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>别在定义指针后还没指向任何变量就开始使用指针</p>
+<p>一定要按照规范写法去定义指针变量<code>int *p = &amp;x;</code></p>
+<h4 id="数组与指针"><a href="#数组与指针" class="headerlink" title="数组与指针"></a>数组与指针</h4><ul>
+<li><p>数组变量是特殊的指针,数组变量本身表达的就是在内存中的地址</p>
+<p><code>int a[10]; int *p =a;</code> 无需使用<code>&amp;</code>取地址</p>
+</li>
+<li><p>但是数组中的元素表达的是单个的变量,这时就需要使用<code>&amp;</code>去取地址</p>
+<p><code>a == &amp;a[0]</code> a的地址和a[0]的地址是一样的概念</p>
+</li>
+<li><p>甚至[]运算符不仅可以对数组用,还可以对指针使用</p>
+<p><code>int x = 2;int *p = &amp; x;p[0] == x[0]</code>可以将普通变量x看作是只有一个元素的数组,所以<code>p[0] = 2</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/06-03_17:29.png" alt="06-03_17:29"></p>
+</li>
+<li><p>除了可以读取值以外还能往数组里写入值</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> *p = &amp;x;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"x = %d\n"</span>, x); <span class="comment">// x = 2</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"p[0] = %d\n"</span>, p[<span class="number">0</span>]); <span class="comment">// p[0] = 2</span></span><br><span class="line">    p[<span class="number">0</span>] = <span class="number">4</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"x = %d"</span>, x); <span class="comment">// 被修改后x = 4</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h5 id="函数-数组传值"><a href="#函数-数组传值" class="headerlink" title="函数_数组传值"></a>函数_数组传值</h5><ul>
+<li><p>函数参数表中的数组实际上是指针,即<code>sizeof[a] == sizeof (int *)</code></p>
+</li>
+<li><p>在函数中声明的时候可以用<code>*数组名称</code>的方式,还可以继续用数组的运算符[]进行计算</p>
+</li>
+</ul>
+<h5 id="数组参数的等价关系"><a href="#数组参数的等价关系" class="headerlink" title="数组参数的等价关系"></a>数组参数的等价关系</h5><p>在参数表和函数原型中它们的表达意思都是一样的</p>
+<p><code>int sum(int *a,int n);</code> == <code>int sum(int *,int);</code> == <code>int sum(int a[],int n);</code> == <code>int sum(int [],int);</code></p>
+<h4 id="指针与const"><a href="#指针与const" class="headerlink" title="指针与const"></a>指针与const</h4><h5 id="const指针"><a href="#const指针" class="headerlink" title="const指针"></a>const指针</h5><ul>
+<li><p>*在const的左边表示指针是const</p>
+<p>当const指针指向了某个变量的地址之后,就无法再指向其他变量了,即无法修改变量的地址(指针的值)了</p>
+<p><code>p = &amp;y</code>无法通过编译,因为变量p是const类型的,不能被分配任何值</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> y = <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">int</span> * <span class="keyword">const</span> p = &amp;x;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"x = %d\n"</span> ,*p); <span class="comment">// 2</span></span><br><span class="line">    *p = <span class="number">30</span>; </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"x = %d"</span> ,*p); <span class="comment">// 30</span></span><br><span class="line">    p = &amp;y; <span class="comment">// Cannot assign to variable 'p' with const-qualified type 'int *const'</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>*在const右边表示指针变量是const</p>
+<p>const指针变量指向了某个变量的地址之后,就不能通过这个指针去修改那个变量了,并非真正意义上让普通变量变成了const</p>
+<p><code>*p = 30</code>无法通过编译,因为指针变量*p是一个只读的变量</p>
+<p>其他修改指针的操作可以正常编译</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> y = <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">int</span> <span class="keyword">const</span> *p = &amp;x;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"x(%%p) = %p\n"</span>, p); <span class="comment">// 0x7ffeebb2ab58</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"x(%%d) = %d\n"</span>, *p); <span class="comment">// 2</span></span><br><span class="line">    *p = <span class="number">30</span>; <span class="comment">// Read-only variable is not assignable</span></span><br><span class="line">    p = &amp;y;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"y(%%p) = %p"</span>, p); <span class="comment">// 0x7ffeebb2ab54</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h5 id="转换const"><a href="#转换const" class="headerlink" title="转换const"></a>转换const</h5><p>你可以将一个普通变量转换成const类型,让其在函数中无法被修改</p>
+<h5 id="const数组"><a href="#const数组" class="headerlink" title="const数组"></a>const数组</h5><p>因为数组已经是一个特殊的const类型的指针了,所以在数组前加上const能让数组中的每个元素都变成const类型的变量</p>
+<p><code>const int x[] = {1,2,3,4,5,6,7,8,9,10,};</code></p>
+<p>当用这种方式创建数组时,就需要在初始化时就对数组进行赋值,因为你无法再修改数组中的元素了</p>
+<p>因为把数组传入给函数时传递的是地址,所以在函数中可以修改数组的值,所以传值给函数的时候也可以让函数声明数组是const,这样就能保护数组在函数中不会被修改</p>
+<p><code>int a(const int x[]);</code></p>
+<h4 id="指针运算"><a href="#指针运算" class="headerlink" title="指针运算"></a>指针运算</h4><p>指针是用十六进制的地址表示普通变量的值,如果对指针执行算数运算可以让地址指向的数组元素向前或向后移动</p>
+<p><strong><em>如果指针不是指向一片如数组一样连续分配的空间,那么这种运算没有意义可言</em></strong></p>
+<h5 id="加减、递增递减"><a href="#加减、递增递减" class="headerlink" title="加减、递增递减"></a>加减、递增递减</h5><p>让指针加1的操作并非让地址真的+1了,加的是sizeof的值,也就是指针所指的普通变量的数据类型的大小</p>
+<ul>
+<li>char类型的指针+1,它的地址加上的是char类型的大小</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> a[] = &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,&#125;;</span><br><span class="line">    <span class="keyword">char</span> *p = a;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"char = %d\n"</span>, <span class="keyword">sizeof</span>(<span class="keyword">char</span>)); <span class="comment">// 1</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"p = %p\n"</span>, p); <span class="comment">// 0x7ffee5bbeabe   +1⇩</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"p+1 = %p\n"</span>, p + <span class="number">1</span>); <span class="comment">// 0x7ffee76f5abf</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>同理,当类型是int的时候,地址+1的操作就是加上一个int类型的大小</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a1[] = &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,&#125;;</span><br><span class="line">    <span class="keyword">int</span> *p = a1;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"int = %d\n"</span>, <span class="keyword">sizeof</span>(<span class="keyword">int</span>)); <span class="comment">// 4</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"p = %p\n"</span>, p); <span class="comment">// 0x7ffee7ac6aa0  +1⇩</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"p+1 = %p\n"</span>, p + <span class="number">1</span>); <span class="comment">// 0x7ffee7ac6aa4</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>*p + 1</code>没有意义,*(p + 1)才是指向数组的下一个元素</p>
+</li>
+<li><p>因为<code>*(p + 1) = a[1]</code>,<code>*(p + n) = a[n]</code> </p>
+</li>
+<li><p>那么既然加法可以看作是向后移动,减法就是向前移动了</p>
+</li>
+<li><p>递增递减相应的也是向前向后挪一个元素的动作</p>
+</li>
+</ul>
+<p>当两个指针相减的时候,减出来的差并非是地址的差,而是地址的差/数据类型大小的差</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a1[] = &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,&#125;;</span><br><span class="line">    <span class="keyword">int</span> *p = a1;</span><br><span class="line">    <span class="keyword">int</span> *p1 = &amp;a1[<span class="number">5</span>];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"int = %d\n"</span>, <span class="keyword">sizeof</span>(<span class="keyword">int</span>)); <span class="comment">// 4</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"p = %p\n"</span>, p); <span class="comment">// 0x7ffee7ac6aa0</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"p1 = %p\n"</span>, p1); <span class="comment">// 0x7ffee9f67ab4</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"p1-p = %d"</span>, p1 - p); <span class="comment">// 5</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>0xb4 = 180</code> - <code>0xa0 = 160</code>  = <code>0x14</code> = <code>20</code></p>
+<p><code>20 / 4(sizeof(int))= 5;</code></p>
+<h5 id="p"><a href="#p" class="headerlink" title="*p++"></a>*p++</h5><p>++的优先级比*来的高,所以先算p++的结果</p>
+<p>作用于数组类的连续空间操作</p>
+<p>使得遍历数组元素时有更高效率的办法</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[] = &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,&#125;;</span><br><span class="line">    <span class="keyword">int</span> *p = a,t = *p;</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">size</span> = <span class="keyword">sizeof</span>(a) / <span class="keyword">sizeof</span>(a[<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">while</span> ( *p &lt; <span class="built_in">size</span> &amp;&amp; *p &gt;= t ) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"p = %d\n"</span>, *p);</span><br><span class="line">        *p++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h5><p><code>&lt;,&lt;=,==,&gt;,&gt;=,!=</code>都可以使用,用来比较普通变量在内存中的地址的大小</p>
+<p>因为数组的元素的地址是线性递增的,所以<code>a[5] &gt; a[4]</code></p>
+<h5 id="0地址"><a href="#0地址" class="headerlink" title="0地址"></a>0地址</h5><p>指针的地址不应该被写入0地址</p>
+<p>但可以用0地址表示特殊的事情</p>
+<ul>
+<li>返回的指针是无效的</li>
+<li>指针没有被真正初始化(先初始化为0)</li>
+</ul>
+<p>NULL在事先定义在C语言中,它表示0地址</p>
+<h5 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h5><p>为了避免错用指针,不同类型的指针是不能直接互相赋值的</p>
+<p>无论指向什么类型,所有的指针大小都是不一样的</p>
+<h6 id="void"><a href="#void" class="headerlink" title="void"></a>void</h6><p>转换类型</p>
+<p>void* 表示指向了未知类型的指针</p>
+<p><code>int *p = &amp;i;</code> <code>void *q = (void*)p;</code> 并没有改变p所指i变量的类型,而是从q去访问i的时候不再将i当做是int类型</p>
+<h4 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h4><h5 id="malloc"><a href="#malloc" class="headerlink" title="malloc"></a>malloc</h5><p>格式:<code>数据类型 *变量名 = (数据类型*)malloc(x*sizeof(数据类型))</code></p>
+<p><code>int *p = (int *)malloc(n * sizeof(int);</code></p>
+<p>在使用malloc函数之前需要在头文件中添加<code>stdlib.h</code></p>
+<p>malloc 需要的是参数不是数组里有多少个元素,而是有多少个字节,用数组总共的元素数量去乘以int类型的字节数就能得到malloc需要的参数了</p>
+<p>malloc返回的结果是void*所以还需要用强制转换成int类型的值才能当作元素个数使用</p>
+<p>由于数组是特殊的指针,所以这里定义的指针可以拿来当数组去使用</p>
+<h5 id="free"><a href="#free" class="headerlink" title="free"></a>free</h5><p>一个malloc对应一个free,程序中出现malloc就带上free</p>
+<p>释放内存,只能释放malloc使用的原始地址,即使被修改过也不行</p>
+<p>free过的地址不能再次free</p>
+<h4 id="指针应用场景"><a href="#指针应用场景" class="headerlink" title="指针应用场景"></a>指针应用场景</h4><ol>
+<li><p>交换两个变量的值</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *a,<span class="keyword">int</span> *b)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a , b;</span><br><span class="line">    a = <span class="number">5</span>;</span><br><span class="line">    b = <span class="number">6</span>;</span><br><span class="line">    swap(&amp;a,&amp;b);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a = %d,b = %d\n"</span>, a, b);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *a,<span class="keyword">int</span> *b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmp = *a;</span><br><span class="line">    *a = *b;</span><br><span class="line">    *b = tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>返回多个值</p>
+<p>找出数组中最小和最大的值</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">minmax</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> <span class="built_in">size</span>, <span class="keyword">int</span> *<span class="built_in">min</span>, <span class="keyword">int</span> *<span class="built_in">max</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">12</span>,<span class="number">14</span>,<span class="number">17</span>,<span class="number">22</span>,<span class="number">25</span>,<span class="number">39</span>,<span class="number">44</span>,<span class="number">55</span>,<span class="number">99</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">min</span>,<span class="built_in">max</span>;</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">size</span> = <span class="keyword">sizeof</span>(a)/ <span class="keyword">sizeof</span>(a[<span class="number">0</span>]);</span><br><span class="line">    minmax(a,<span class="built_in">size</span>,&amp;<span class="built_in">min</span>,&amp;<span class="built_in">max</span>); <span class="comment">// 传递a数组,a数组的元素数量,min和max变量的地址</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"min = %d,max = %d"</span>, <span class="built_in">min</span>, <span class="built_in">max</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">minmax</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> <span class="built_in">size</span>, <span class="keyword">int</span> *<span class="built_in">min</span>, <span class="keyword">int</span> *<span class="built_in">max</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    *<span class="built_in">min</span> = *<span class="built_in">max</span> = a[<span class="number">0</span>]; <span class="comment">// 初始化min和max变量的值为a数组第一个值</span></span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">1</span>; i &lt; <span class="built_in">size</span>; i++ ) &#123; <span class="comment">// 历遍数组</span></span><br><span class="line">        <span class="keyword">if</span> ( a[i] &lt; *<span class="built_in">min</span> )&#123; </span><br><span class="line">            *<span class="built_in">min</span> = a[i];</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> ( a[i] &gt; *<span class="built_in">max</span> )&#123;</span><br><span class="line">            *<span class="built_in">max</span> = a[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>函数返回异常值</p>
+<p>函数返回运算的状态,而结果通过指针去返回</p>
+<p>当任何数值都是有效的可能结果时,得分开返回</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">5</span>, b = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    <span class="keyword">if</span> (divide( a, b, &amp;c ))&#123; <span class="comment">// 将a，b的值，c的地址传递给divide函数</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d/%d=%d"</span>, a, b, c);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">divide</span><span class="params">( <span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> *res )</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ret = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> ( b == <span class="number">0</span>)&#123;</span><br><span class="line">        ret = <span class="number">-1</span>; <span class="comment">// 如果分母是0的话返回错误值-1</span></span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        *res = a / b; <span class="comment">// 否则的话返回值是a除以b的值</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<hr>
+<p>啊这…写得也太多了吧</p>
+
+          
+            <div class='article_footer'>
+              
+                
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://zhboat.ink/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-8/>https://zhboat.ink/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-8/</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-13T17:18:12+00:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年11月14日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-9/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C语言笔记(9)</p>
+                <p class='content'>字符串
+
+
+字符串是以字符数组的方式存在的
+
+不能对其用运算符做运算
+
+通过数组的方式可以遍历字符串
+
+可以通过字符串常量去初始化字符数组
+
+
+字符数组
+以0结尾的一串字符
+
+0标志字符串的结束...</p>
+              </a>
+            
+            
+              <a class='next' href='/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-7/'>
+                <p class='title'>C语言笔记(7)<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>数组
+
+数组可以存储一个固定大小的相同类型元素的顺序集合
+数组的目的是存储一系列数据,但它往往被认为是一系列相同的变量
+数组一旦被创建了就不能再改变它的大小了,元素在内存中是连续依次排列的
+格式...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    
+
+  <article class="post white-box reveal comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      <section id="comments">
+        <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+      </section>
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#指针"><span class="toc-text">指针</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#取地址"><span class="toc-text">取地址</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#运算符-amp"><span class="toc-text">运算符&amp;</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#输出格式"><span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#相邻变量的地址"><span class="toc-text">相邻变量的地址</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#数组的地址"><span class="toc-text">数组的地址</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#指针-1"><span class="toc-text">指针</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#格式"><span class="toc-text">格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#指针变量"><span class="toc-text">指针变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#指针作为参数"><span class="toc-text">指针作为参数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#通过指针访问变量"><span class="toc-text">通过指针访问变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#amp-互相反作用"><span class="toc-text">&amp;*互相反作用</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注意事项"><span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组与指针"><span class="toc-text">数组与指针</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#函数-数组传值"><span class="toc-text">函数_数组传值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#数组参数的等价关系"><span class="toc-text">数组参数的等价关系</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#指针与const"><span class="toc-text">指针与const</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#const指针"><span class="toc-text">const指针</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#转换const"><span class="toc-text">转换const</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#const数组"><span class="toc-text">const数组</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#指针运算"><span class="toc-text">指针运算</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#加减、递增递减"><span class="toc-text">加减、递增递减</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#p"><span class="toc-text">*p++</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#比较"><span class="toc-text">比较</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#0地址"><span class="toc-text">0地址</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#类型"><span class="toc-text">类型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#动态内存分配"><span class="toc-text">动态内存分配</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#malloc"><span class="toc-text">malloc</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#free"><span class="toc-text">free</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#指针应用场景"><span class="toc-text">指针应用场景</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+    </div>
+    
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='random'
+      fixed='true'
+      list-max-height='340px'
+      server='netease'
+      type='playlist'
+      id='140168575'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="mailto:me@zhboat@163.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/zhboat"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=135441066"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+      
+    
+      
+        Use
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/releases/tag/3.0.0-rc.2" target="_blank" class="codename">Volantis</a>
+        as theme, total visits
+          <span id="busuanzi_value_site_pv"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+          times
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2017-2020 柚木舟</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <div>
+    
+      
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick='document.execCommand("copy")'><i class='fa fa-copy fa-fw'></i>Copy Text</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>Copy Link</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>Open Link in New Tab</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>Copy Image Link</a>
+        <hr id='hr-src'>
+      </li>
+      <li class='navigation'>
+        <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+        <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+        <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+        <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+      </li>
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          copyText.style.display = 'block';
+          hrText.style.display = 'block';
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if (true == true) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper1.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper2.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper3.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper4.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper5.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper6.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper7.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper8.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper9.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper10.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper11.png", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper12.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper13.png", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper14.jpg", "https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/wallpaper/wallpaper15.jpg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/00E0F0ED-9F1C-407A-9AA6-545649D919F4.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/landscape/AEB33F9D-7294-4CF1-B8C5-3020748A9D45.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/landscape/10A0FCE5-36A1-4AD0-8CF0-019259A89E03.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/landscape/298468D7-E388-44A8-8CC5-8213BDC33CED.jpeg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "13000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "13000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  <script>
+    let APlayerController = new Object();
+    APlayerController.id = '140168575';  // 设定全局音乐播放ID
+    APlayerController.volume = '0.7';
+  </script>
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
+
+  
+    
+<script src="/js/aplayer.js"></script>
+
+  
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    let pageUrl = $.trim($('#pjax-comment-path').text()) === "none" ? 
+      decodeURI(window.location.pathname) : $.trim($('#pjax-comment-path').text());
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) === "none" ?
+      "快来评论吧~" : $.trim($('#pjax-comment-placeholder').text());
+
+    let ALLPATH = '';
+    if(ALLPATH != '') pageUrl = ALLPATH;
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: pageUrl,
+      appId: "a5zTWlPcQKYAgvKcX73pEYNB-gzGzoHsz",
+      appKey: "q0mihhtI9WJg37rMgDqXyJ2A",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps
+    })
+  }
+
+  $(function () {
+    pjax_valine();
+  });
+</script>
+
+
+
+
+<!-- darkmodejs -->
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+<!-- scrollreveal -->
+
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    function pjax_scrollrebeal() {
+      ScrollReveal().reveal('.l_main .reveal', {
+        distance: '32px',
+        duration: '800',
+        interval: '20',
+        scale: '1',
+        easing: 'ease-out'
+      });
+    }
+
+    $(function () {
+      pjax_scrollrebeal();
+    });
+  </script>
+
+<!-- ******************************** -->
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  function pjax_fancybox() {
+    $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".article-entry").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
+</script>
+
+<!-- ******************************** -->
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+
+
+
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+
+      try{
+        pjax_fancybox();
+        
+          
+          if ('.cover') {
+            $('.cover').backstretch("resize");
+          } else {
+            $.backstretch("resize");
+          }
+        
+        
+        
+          pjax_scrollrebeal();
+        
+        
+          pjax_initCopyCode();
+        
+        
+          pjax_valine();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/nico.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
