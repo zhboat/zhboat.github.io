@@ -442,8 +442,8 @@
 </tr>
 <tr>
 <td align="center">Wi-Fi&amp;蓝牙</td>
-<td align="center">自带更换白果卡</td>
-<td align="center">BCM94360cs2</td>
+<td align="center">自带 Intel网卡</td>
+<td align="center">已驱动</td>
 </tr>
 <tr>
 <td align="center">USB</td>
@@ -451,7 +451,7 @@
 <td align="center">内建</td>
 </tr>
 <tr>
-<td align="center">休眠</td>
+<td align="center">睡眠</td>
 <td align="center"></td>
 <td align="center">正常</td>
 </tr>
@@ -508,7 +508,7 @@
 </p></div><div class="body"><ol><li><p>oc更新至<a href="https://github.com/acidanthera/OpenCorePkg" target="_blank" rel="noopener">0.6.3正式版</a></p></li><li><p>支持最新版本BigSur 11.0.1正式版</p></li><li><p>修改仿冒机型信息为14,3</p><p>更新请先退出AppleID</p></li><li><p>更新驱动版本</p></li><li><p>优化触摸板</p></li><li><p>其他优化…</p></li></ol></div></div>
 
 <div class="timenode"><div class="meta"><p><p>0x8</p>
-</p></div><div class="body"><ol><li>oc更新至<a href="https://github.com/acidanthera/OpenCorePkg" target="_blank" rel="noopener">0.6.4正式版</a></li><li>移除三码,请自行添加,<strong>建议留空UUID</strong></li><li>更新驱动版本</li><li>修复无法启动Windows的问题</li><li>未解锁用户请使用<code>config_locked</code>引导</li></ol><p>如果遇到有线网卡无法连接网络情况请将<code>系统偏好设置/网络/以太网适配器/高级/硬件/速度&amp;双工</code>手动改成宽带速率和全双工模式</p><p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/12-08_11:53.png" alt="12-08_11:53"></p><p>By White</p><ul><li>屏蔽独显（防止S3下独显启用导致的崩溃）</li><li><del>亮度键调节</del></li><li>去除无用驱动（I2C等）</li><li>去除无用HotPatch（PMC、SBUS等）</li><li>去除NoTouchID（Big Sur下已失效）</li><li>添加Sinetek驱动</li><li>添加屏蔽_PRW唤醒</li><li>精简无用Quirk/无用添加项</li><li>仿冒环境光传感器</li><li>添加背光修补</li><li>去除操作系统补丁</li><li>去除KASLR注入方式</li><li>将PCI下Layout ID更改为boot-args参数（便于调试）</li><li>去除无用NVRAM项</li><li>去除SMBIOS下UUID</li><li>去除USB限制解除</li><li>修复启动磁盘判断</li><li>去除KEXT崩溃信息</li><li>修复音频崩溃问题（Kaby lake）</li></ul></div></div>
+</p></div><div class="body"><ol><li>oc更新至<a href="https://github.com/acidanthera/OpenCorePkg" target="_blank" rel="noopener">0.6.4正式版</a></li><li>移除三码,请自行添加,<strong>建议留空UUID</strong></li><li>更新驱动版本</li><li>修复无法启动Windows的问题<img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/12-08_12:02.gif" alt=""></li><li>添加Intel网卡支持(可能导致无法正常睡眠)</li><li>未解锁用户请使用<code>config_locked</code>引导</li></ol><p>如果遇到有线网卡无法连接网络情况请将<code>系统偏好设置/网络/以太网适配器/高级/硬件/速度&amp;双工</code>手动改成宽带速率和全双工模式</p><p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/12-08_11:53.png" alt="12-08_11:53"></p><p>By White</p><ul><li>屏蔽独显（防止S3下独显启用导致的崩溃）</li><li><del>亮度键调节</del></li><li>去除无用驱动（I2C等）</li><li>去除无用HotPatch（PMC、SBUS等）</li><li>去除NoTouchID（Big Sur下已失效）</li><li>添加Sinetek驱动</li><li>添加屏蔽_PRW唤醒</li><li>精简无用Quirk/无用添加项</li><li>仿冒环境光传感器</li><li>添加背光修补</li><li>去除操作系统补丁</li><li>去除KASLR注入方式</li><li>将PCI下Layout ID更改为boot-args参数（便于调试）</li><li>去除无用NVRAM项</li><li>去除SMBIOS下UUID</li><li>去除USB限制解除</li><li>修复启动磁盘判断</li><li>去除KEXT崩溃信息</li><li>修复音频崩溃问题（Kaby lake）</li></ul></div></div>
 </div>
 
 <h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><ul>
@@ -628,7 +628,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-08T03:59:41+00:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-08T04:03:44+00:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2020年12月8日</p>
