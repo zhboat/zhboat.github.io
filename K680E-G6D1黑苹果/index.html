@@ -472,15 +472,15 @@
 </tr>
 </tbody></table>
 <h3 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h3><ul>
-<li><del>休眠并不像Win那么完美</del>休眠状态只能开盖或用电源键唤醒</li>
+<li>睡眠状态只能开盖或用电源键唤醒<del>睡眠并不像Win那么完美</del></li>
 <li><del>缓冲帧注入的是HD520的ID(不然我开机会黑屏)</del></li>
 <li><del>电量不能显示插拔电源不能切换状态</del></li>
 <li><del>亮度调节需要休眠后才正常</del></li>
 <li><del>触摸板在设置中无法显示(功能正常)</del></li>
 <li><del>触摸板手势不全</del></li>
 <li>快捷键无法调节亮度</li>
-<li>CPU没有低频</li>
-<li>ps : 测试来测试去发现是我自己问题🌚…</li>
+<li>Intel网卡可能导致无法正常睡眠</li>
+<li><del>CPU没有低频</del></li>
 </ul>
 <h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><div class="timeline"><p class='p h2'>更新日志</p>
 <div class="timenode"><div class="meta"><p><p>0x0</p>
@@ -496,7 +496,7 @@
 </p></div><div class="body"><ol><li><p>迁移至OC 0.5.9正式版</p></li><li><p>添加CPU传感器驱动</p></li><li><p>添加原生电源管理</p></li><li><p>其他…(忘记了)</p></li><li><p>换成oc后开机快了一倍 ohhhhhh<img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/06-29_11:36.jpg" alt="06-29_11:36"></p></li></ol></div></div>
 
 <div class="timenode"><div class="meta"><p><p>0x4</p>
-</p></div><div class="body"><ol><li><p>oc版本更新至0.6.0 测试版</p></li><li><p>支持macOS 11 beta</p></li><li><p>换成自编译的万能触控板驱动</p></li><li><p>不知道我的设备为啥不能用ps2和rmi…</p></li><li><p>11可用的一键开启hidpi<code>bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi.sh)&quot;</code>来自于(<a href="https://github.com/mlch911/one-key-hidpi" target="_blank" rel="noopener">https://github.com/mlch911/one-key-hidpi</a>)</p></li></ol></div></div>
+</p></div><div class="body"><ol><li><p>oc版本更新至0.6.0 测试版</p></li><li><p>支持macOS 11 beta</p></li><li><p>换成自编译的万能触控板驱动</p></li><li><p>不知道我的设备为啥不能用ps2和rmi…</p></li><li><p>11可用的一键开启hidpi<code>bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/dev/hidpi.sh)&quot;</code></p></li></ol></div></div>
 
 <div class="timenode"><div class="meta"><p><p>0x5</p>
 </p></div><div class="body"><ol><li>oc版本更新至0.6.1测试版 <a href="https://github.com/williambj1/OpenCore-Factory/releases/tag/2020-08-13" target="_blank" rel="noopener">8.13</a></li><li>支持11.0 beta4</li><li>核显注入ID为<code>19160000</code></li></ol></div></div>
@@ -506,6 +506,9 @@
 
 <div class="timenode"><div class="meta"><p><p>0x7</p>
 </p></div><div class="body"><ol><li><p>oc更新至<a href="https://github.com/acidanthera/OpenCorePkg" target="_blank" rel="noopener">0.6.3正式版</a></p></li><li><p>支持最新版本BigSur 11.0.1正式版</p></li><li><p>修改仿冒机型信息为14,3</p><p>更新请先退出AppleID</p></li><li><p>更新驱动版本</p></li><li><p>优化触摸板</p></li><li><p>其他优化…</p></li></ol></div></div>
+
+<div class="timenode"><div class="meta"><p><p>0x8</p>
+</p></div><div class="body"><ol><li>oc更新至<a href="https://github.com/acidanthera/OpenCorePkg" target="_blank" rel="noopener">0.6.4正式版</a></li><li>移除三码,请自行添加,<strong>建议留空UUID</strong></li><li>更新驱动版本</li><li>修复无法启动Windows的问题</li><li>未解锁用户请使用<code>config_locked</code>引导</li></ol><p>如果遇到有线网卡无法连接网络情况请将<code>系统偏好设置/网络/以太网适配器/高级/硬件/速度&amp;双工</code>手动改成宽带速率和全双工模式</p><p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/12-08_11:53.png" alt="12-08_11:53"></p><p>By White</p><ul><li>屏蔽独显（防止S3下独显启用导致的崩溃）</li><li><del>亮度键调节</del></li><li>去除无用驱动（I2C等）</li><li>去除无用HotPatch（PMC、SBUS等）</li><li>去除NoTouchID（Big Sur下已失效）</li><li>添加Sinetek驱动</li><li>添加屏蔽_PRW唤醒</li><li>精简无用Quirk/无用添加项</li><li>仿冒环境光传感器</li><li>添加背光修补</li><li>去除操作系统补丁</li><li>去除KASLR注入方式</li><li>将PCI下Layout ID更改为boot-args参数（便于调试）</li><li>去除无用NVRAM项</li><li>去除SMBIOS下UUID</li><li>去除USB限制解除</li><li>修复启动磁盘判断</li><li>去除KEXT崩溃信息</li><li>修复音频崩溃问题（Kaby lake）</li></ul></div></div>
 </div>
 
 <h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><ul>
@@ -522,7 +525,7 @@
 <p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/11-13_23:25.png" alt="11-13_23:25"><br><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/07-14_00:36.png" alt="07-14_00:36"></p>
 </li>
 <li><p>设置</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/10-21_21:59.png" alt="10-21_21:59"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/12-08_11:54.png" alt=""></p>
 </li>
 <li><p>电池</p>
 <p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/08-13_20:14.png" alt="电池"></p>
@@ -551,7 +554,8 @@
 <p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/05-21_20:27.png" alt="05-21_20:27"></p>
 </li>
 </ul>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://zhboat.lanzous.com/b09f7sn2f" target="_blank" rel="noopener">蓝奏云</a></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>网盘:<a href="https://zhboat.lanzous.com/b09f7sn2f" target="_blank" rel="noopener">蓝奏云</a></p>
+<p>仓库:<a href="https://github.com/zhboat/k680e-g6d1_Hackintosh" target="_blank" rel="noopener">k680e-g6d1_Hackintosh</a></p>
 <blockquote>
 <p>欢迎加入QQ群一起交流讨论981553004</p>
 <p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/11-14_01:08.jpg" alt="11-14_01:08"></p>
@@ -563,6 +567,7 @@
 <p>参考:<a href="http://bbs.pcbeta.com/forum.php?mod=viewthread&amp;tid=1831835&amp;page=1&amp;ordertype=1#pid50365897" target="_blank" rel="noopener">http://bbs.pcbeta.com/forum.php?mod=viewthread&amp;tid=1831835&amp;page=1&amp;ordertype=1#pid50365897</a></p>
 <p>参考:<a href="https://blog.xjn819.com/?p=543" target="_blank" rel="noopener">https://blog.xjn819.com/?p=543</a></p>
 <p>参考:<a href="https://github.com/usernameOwdxj5/OpenCore-Hasee-K670-i5-9400-W650kj1" target="_blank" rel="noopener">https://github.com/usernameOwdxj5/OpenCore-Hasee-K670-i5-9400-W650kj1</a></p>
+<p>参考:<a href="http://bbs.pcbeta.com/viewthread-1874306-1-1.html" target="_blank" rel="noopener">http://bbs.pcbeta.com/viewthread-1874306-1-1.html</a></p>
 </blockquote>
 
           
@@ -623,10 +628,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-14T08:17:05+00:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-08T03:59:41+00:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年11月14日</p>
+    <p>更新于：2020年12月8日</p>
   </a>
 </div>
 
