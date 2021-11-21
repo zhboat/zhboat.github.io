@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -18,9 +16,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2020/5 - 柚子的随记</title>
+  <title>Django笔记 - 柚子的随记</title>
+  
+    <meta name="keywords" content="Python,Django">
   
 
+  
+    <meta name="description" content="记录学习Django的过程">
   
 
   <!-- feed -->
@@ -81,7 +83,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover ' style="display: none;">
+    <cover class='cover post' style="display: none;">
       <div class='cover-body'>
   <div class='a'>
     
@@ -295,8 +297,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">Django笔记</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path">none</div> 
   <div id="pjax-comment-placeholder">none</div> 
@@ -329,28 +331,11 @@
       
 
 <div class='l_main'>
-	
-		
-  <section class="post-list ">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
   
+
+  
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -360,11 +345,11 @@
       <div class="meta" id="header-meta">
         
           
-  <h2 class="title">
-    <a href="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-7/">
-      C语言笔记(7)
+  <h1 class="title">
+    <a href="/Django%E7%AC%94%E8%AE%B0/">
+      Django笔记
     </a>
-  </h2>
+  </h1>
 
 
         
@@ -392,58 +377,9 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年5月28日</p>
+    <p>发布于：2021年11月21日</p>
   </a>
 </div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>2.1k words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>8 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-7/" class="leancloud_visitors" data-flag-title="C语言笔记(7)">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-7/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-7/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
 
             
           
@@ -461,531 +397,220 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-7/">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
           
-  <h2 class="title">
-    <a href="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-6/">
-      C语言笔记(6)
-    </a>
-  </h2>
+          
+          <p>记录学习Django的过程</p>
+<a id="more"></a>
+
+<table>
+<thead>
+<tr>
+<th>System:MacOS 12.0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Python Version:3.8.9</td>
+</tr>
+<tr>
+<td>Django Version:2.2.1</td>
+</tr>
+</tbody></table>
+<h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><ul>
+<li><p>使用PyCharm</p>
+<p>新建Django项目<code>File/New Project/Django</code></p>
+<p>如果没有提前安装Django则会自动安装最新版</p>
+</li>
+<li><p>命令行</p>
+<p>创建项目命令<code>django-admin startproject 项目名</code></p>
+<p>切换到项目目录</p>
+<p>启动项目<code>python mange.py runserver</code></p>
+</li>
+</ul>
+<h3 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h3><p>默认端口为8000</p>
+<h4 id="修改端口号"><a href="#修改端口号" class="headerlink" title="修改端口号"></a>修改端口号</h4><ul>
+<li><p>PyCharm</p>
+<p>编辑项目,修改Host:Port</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/11-21_19:27.png" alt="11-21_19:27"></p>
+</li>
+<li><p>命令行运行</p>
+<p><code>python mange.py runserver ip:指定端口号</code></p>
+</li>
+</ul>
+<h3 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h3><p>一切就绪后通过访问<code>127.0.0.1:8000</code>就能看到Django初始界面</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/11-21_22:03.png" alt="11-21_22:03"></p>
+<h3 id="Django目录结构"><a href="#Django目录结构" class="headerlink" title="Django目录结构"></a>Django目录结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">|-- 项目名</span><br><span class="line">|  |-- __init__.py --&gt; 声明该项目是Python包</span><br><span class="line">|  |-- setting.py  --&gt; 项目的配置文件</span><br><span class="line">|  |-- urls.py     --&gt; URL声明,管理资源地址</span><br><span class="line">|  |-- wsgi.py     --&gt; django自带的服务器</span><br><span class="line">|  |-- views.py    --&gt; 名称可自定义的视图文件</span><br><span class="line">db.sqlite3  --&gt; 文本型数据库</span><br><span class="line">manage.py   --&gt; 项目运行文件</span><br></pre></td></tr></table></figure>
 
 
-        
-        <div class='new-meta-box'>
+
+
           
-            
-          
-            
+            <div class='article_footer'>
               
-<div class='new-meta-item author'>
-  <a class='author' href="" rel="nofollow">
-    <img no-lazy src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic/pictures/favicon.png">
-    <p>柚木舟</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年5月24日</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.7k words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>6 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-6/" class="leancloud_visitors" data-flag-title="C语言笔记(6)">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-6/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-6/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-6/">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/K680E-G6D1%E9%BB%91%E8%8B%B9%E6%9E%9C/">
-      K680e-G6D1黑苹果
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="" rel="nofollow">
-    <img no-lazy src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic/pictures/favicon.png">
-    <p>柚木舟</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年5月21日</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>1.1k words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>4 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/K680E-G6D1%E9%BB%91%E8%8B%B9%E6%9E%9C/" class="leancloud_visitors" data-flag-title="K680e-G6D1黑苹果">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/K680E-G6D1%E9%BB%91%E8%8B%B9%E6%9E%9C/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/K680E-G6D1%E9%BB%91%E8%8B%B9%E6%9E%9C/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这是一个拼凑了很久才对我而言较为完美的一套配置</p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/K680E-G6D1%E9%BB%91%E8%8B%B9%E6%9E%9C/">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-5/">
-      C语言笔记(5)
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a class='author' href="" rel="nofollow">
-    <img no-lazy src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic/pictures/favicon.png">
-    <p>柚木舟</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年5月20日</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  <div class="new-meta-item wordcount">
-    <a class='notlink'>
-      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>3.1k words</p>
-    </a>
-  </div>
-  <div class="new-meta-item readtime">
-    <a class='notlink'>
-      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>12 min</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-5/" class="leancloud_visitors" data-flag-title="C语言笔记(5)">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-5/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-5/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>基础数据类型</p>
-      
-    </div>
-    
-      
-        <a class= "readmore" href="/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-5/">
-          阅读全文 <i class="fas fa-chevron-right"></i>
-        </a>
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
-
-  
-
-
-	
-</div>
-<aside class='l_side'>
-  
+                
   
     
     
 
-<section class="widget blogger shadow desktop">
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
   <div class='content'>
     
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">柚子的随记</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
+      <blockquote>
         
           
-            <a href="mailto:me@zhboat@163.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
           
         
           
-            <a href="https://github.com/zhboat"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
+            <p>本文永久链接是：<a href=https://zhboat.ink/Django%E7%AC%94%E8%AE%B0/>https://zhboat.ink/Django%E7%AC%94%E8%AE%B0/</a></p>
           
         
-          
-            <a href="https://music.163.com/#/user/home?id=135441066"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-      </div>
+      </blockquote>
     
   </div>
 </section>
 
   
 
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-11-21T14:17:29+00:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年11月21日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Django/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Django</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/MacOS%E5%80%BC%E5%BE%97%E5%AE%89%E5%88%A9%E7%9A%84%E8%BD%AF%E4%BB%B6/'>
+                <p class='title'>MacOS值得安利的软件<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>提升MacOS的实用性(懒癌的自我救赎
+
+
+首先安利一个比较好用的盗版软件(bushi)下载站
+MacWk
+
+下列软件都属于我个人觉得不错的软件,顺序不能说明实用性
+0x00 Todesk
+一款...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    
+
+  <article class="post white-box reveal comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      <section id="comments">
+        <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+      </section>
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
   
     
     
 
-  
 
-  
-    
-    
-  
 
-  <section class="widget tagcloud shadow desktop mobile">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <a href="/tags/Arch/" style="font-size: 14px; color: #999">Arch</a> <a href="/tags/C/" style="font-size: 24px; color: #555">C</a> <a href="/tags/Django/" style="font-size: 14px; color: #999">Django</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/MacOS/" style="font-size: 14px; color: #999">MacOS</a> <a href="/tags/Python/" style="font-size: 17.33px; color: #828282">Python</a> <a href="/tags/github/" style="font-size: 17.33px; color: #828282">github</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 20.67px; color: #6c6c6c">日常</a> <a href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/" style="font-size: 14px; color: #999">黑苹果</a>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建项目"><span class="toc-text">创建项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#端口"><span class="toc-text">端口</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#修改端口号"><span class="toc-text">修改端口号</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Index"><span class="toc-text">Index</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Django目录结构"><span class="toc-text">Django目录结构</span></a></li></ol>
     </div>
   </section>
 
 
   
 
-  
-
 
 </aside>
 
-
-
-
-
-	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-	
-
-	
 
 
     </div>

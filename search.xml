@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Django笔记</title>
+      <link href="/Django%E7%AC%94%E8%AE%B0/"/>
+      <url>/Django%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<p>记录学习Django的过程</p><a id="more"></a><table><thead><tr><th>System:MacOS 12.0</th></tr></thead><tbody><tr><td>Python Version:3.8.9</td></tr><tr><td>Django Version:2.2.1</td></tr></tbody></table><h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><ul><li><p>使用PyCharm</p><p>新建Django项目<code>File/New Project/Django</code></p><p>如果没有提前安装Django则会自动安装最新版</p></li><li><p>命令行</p><p>创建项目命令<code>django-admin startproject 项目名</code></p><p>切换到项目目录</p><p>启动项目<code>python mange.py runserver</code></p></li></ul><h3 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h3><p>默认端口为8000</p><h4 id="修改端口号"><a href="#修改端口号" class="headerlink" title="修改端口号"></a>修改端口号</h4><ul><li><p>PyCharm</p><p>编辑项目,修改Host:Port</p><p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/11-21_19:27.png" alt="11-21_19:27"></p></li><li><p>命令行运行</p><p><code>python mange.py runserver ip:指定端口号</code></p></li></ul><h3 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h3><p>一切就绪后通过访问<code>127.0.0.1:8000</code>就能看到Django初始界面</p><p><img src="https://cdn.jsdelivr.net/gh/zhboat/cdn_pic@master/upic/2020/11-21_22:03.png" alt="11-21_22:03"></p><h3 id="Django目录结构"><a href="#Django目录结构" class="headerlink" title="Django目录结构"></a>Django目录结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">|-- 项目名</span><br><span class="line">|  |-- __init__.py --&gt; 声明该项目是Python包</span><br><span class="line">|  |-- setting.py  --&gt; 项目的配置文件</span><br><span class="line">|  |-- urls.py     --&gt; URL声明,管理资源地址</span><br><span class="line">|  |-- wsgi.py     --&gt; django自带的服务器</span><br><span class="line">|  |-- views.py    --&gt; 名称可自定义的视图文件</span><br><span class="line">db.sqlite3  --&gt; 文本型数据库</span><br><span class="line">manage.py   --&gt; 项目运行文件</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Django </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MacOS值得安利的软件</title>
       <link href="/MacOS%E5%80%BC%E5%BE%97%E5%AE%89%E5%88%A9%E7%9A%84%E8%BD%AF%E4%BB%B6/"/>
       <url>/MacOS%E5%80%BC%E5%BE%97%E5%AE%89%E5%88%A9%E7%9A%84%E8%BD%AF%E4%BB%B6/</url>
